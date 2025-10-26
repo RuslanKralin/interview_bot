@@ -35,6 +35,8 @@ bot.command("start", async (ctx) => {
     .row()
     .text("Nodejs")
     .text("db")
+    .row()
+    .text("TS")
     .resized();
   console.log(ctx.api.token);
   await ctx.reply(
@@ -44,7 +46,7 @@ bot.command("start", async (ctx) => {
 });
 
 bot.hears(
-  ["HTML", "CSS", "javascript", "React", "Nodejs", "db"],
+  ["HTML", "CSS", "javascript", "React", "Nodejs", "db", "TS"],
   async (ctx) => {
     const topic = ctx.message.text.toLowerCase();
     const question = getRandomQuestion(topic);
