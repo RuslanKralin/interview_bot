@@ -5,16 +5,19 @@ import { getCorrectAnswer } from "./utils.js";
 import http from "http";
 dotenv.config();
 
-// Проверка наличия токена
-if ("AAEYn1zOlTO0tOgPyK6sK86DlivBqvZUbXQ") {
-  console.error("❌ BOT_TOKEN не установлен в переменных окружения!");
-  console.error(
-    "Установите BOT_TOKEN на Render: Dashboard > Environment > Environment Variables"
-  );
+// Получаем токен из переменной окружения или используем захардкоженный
+const BOT_TOKEN = process.env.BOT_TOKEN || "AAEYn1zOlTO0tOgPyK6sK86DlivBqvZUbXQ";
+
+console.log(`🔑 Используется токен: ${BOT_TOKEN.substring(0, 10)}...`);
+
+// Проверка формата токена
+if (!BOT_TOKEN || BOT_TOKEN.length < 30) {
+  console.error("❌ BOT_TOKEN пустой или слишком короткий!");
+  console.error("Токен должен быть вида: 1234567890:ABCdefGHIjklMNOpqrsTUVwxyz");
   process.exit(1);
 }
 
-const bot = new Bot("AAEYn1zOlTO0tOgPyK6sK86DlivBqvZUbXQ");
+const bot = new Bot(BOT_TOKEN);
 
 bot.command("start", async (ctx) => {
   const startKeyboard = new Keyboard()
