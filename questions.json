@@ -647,293 +647,417 @@
         },
         { "id": 4, "text": "Мемоизации функций", "isCorrect": true }
       ]
-    }
-  ],
-
-  "nodejs": [
-    {
-      "id": 1,
-      "text": "Что такое Node.js и для чего он используется?",
-      "hasOptions": false,
-      "answer": "Node.js — это среда выполнения JavaScript вне браузера, чаще всего используется для серверной разработки, написания утилит, CLI и автоматизации."
-    },
-    {
-      "id": 2,
-      "text": "Какой модуль используется для работы с файловой системой в Node.js?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "fs", "isCorrect": true },
-        { "id": 2, "text": "path", "isCorrect": false },
-        { "id": 3, "text": "http", "isCorrect": false },
-        { "id": 4, "text": "os", "isCorrect": false }
-      ]
-    },
-    {
-      "id": 3,
-      "text": "Что такое event loop?",
-      "hasOptions": false,
-      "answer": "Event loop — это механизм, который позволяет Node.js выполнять неблокирующий асинхронный код, обрабатывая события и колбэки."
-    },
-    {
-      "id": 4,
-      "text": "Какой командой устанавливается пакет глобально через npm?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "npm install -g", "isCorrect": true },
-        { "id": 2, "text": "npm install", "isCorrect": false },
-        { "id": 3, "text": "npm add", "isCorrect": false },
-        { "id": 4, "text": "npm global", "isCorrect": false }
-      ]
-    },
-    {
-      "id": 5,
-      "text": "Что делает функция require()?",
-      "hasOptions": false,
-      "answer": "require() используется для подключения модулей в Node.js."
-    },
-    {
-      "id": 6,
-      "text": "Какой модуль позволяет работать с HTTP в Node.js?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "http", "isCorrect": true },
-        { "id": 2, "text": "net", "isCorrect": false },
-        { "id": 3, "text": "url", "isCorrect": false },
-        { "id": 4, "text": "dns", "isCorrect": false }
-      ]
-    },
-    {
-      "id": 7,
-      "text": "Что такое callback-функция?",
-      "hasOptions": false,
-      "answer": "Callback — это функция, которая передается как аргумент в другую функцию и вызывается после завершения основной операции."
-    },
-    {
-      "id": 8,
-      "text": "Какой глобальный объект содержит аргументы командной строки?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "process.argv", "isCorrect": true },
-        { "id": 2, "text": "global.args", "isCorrect": false },
-        { "id": 3, "text": "process.env", "isCorrect": false },
-        { "id": 4, "text": "cli.args", "isCorrect": false }
-      ]
-    },
-    {
-      "id": 9,
-      "text": "Что такое package.json?",
-      "hasOptions": false,
-      "answer": "package.json — это файл конфигурации проекта Node.js, где описаны зависимости, скрипты и метаданные проекта."
-    },
-    {
-      "id": 10,
-      "text": "Какой метод завершает процесс Node.js?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "process.exit()", "isCorrect": true },
-        { "id": 2, "text": "process.stop()", "isCorrect": false },
-        { "id": 3, "text": "exit()", "isCorrect": false },
-        { "id": 4, "text": "end()", "isCorrect": false }
-      ]
-    },
-    {
-      "id": 11,
-      "text": "В чем отличие между require и import?",
-      "hasOptions": false,
-      "answer": "require() — CommonJS, работает синхронно; import — ES-модули, работает асинхронно и требует дополнительной настройки."
-    },
-    {
-      "id": 12,
-      "text": "Что такое middleware в Express?",
-      "hasOptions": false,
-      "answer": "Middleware — это функция, которая имеет доступ к объектам запроса и ответа и следующей функции в цикле обработки запроса."
-    },
-    {
-      "id": 13,
-      "text": "Какой модуль используется для работы с путями файлов?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "path", "isCorrect": true },
-        { "id": 2, "text": "fs", "isCorrect": false },
-        { "id": 3, "text": "os", "isCorrect": false },
-        { "id": 4, "text": "url", "isCorrect": false }
-      ]
     },
     {
       "id": 14,
-      "text": "Какой метод используется для запуска сервера на определённом порту?",
+      "text": "Какие основные факторы вызывают повторный рендеринг компонента в React?",
       "hasOptions": false,
-      "answer": "server.listen(port) — запускает сервер на указанном порту."
+      "answer": "🔄 <b>Основные факторы повторного рендеринга:</b>\n\n1️⃣ <b>Изменение state</b> — вызов setState или setХХХ из useState\n2️⃣ <b>Изменение props</b> — родитель передал новые пропсы\n3️⃣ <b>Изменение context</b> — обновился контекст, который использует компонент\n4️⃣ <b>Рендер родителя</b> — если родитель перерисовался, дочерние тоже перерисуются (если не оптимизированы)\n5️⃣ <b>forceUpdate()</b> — принудительный рендер в классовых компонентах\n6️⃣ <b>Изменение key</b> — React считает это новым компонентом\n\n💡 <b>Важно:</b> React рендерит компонент, когда нужно проверить, изменился ли UI. Это не всегда означает изменение DOM!"
     },
     {
       "id": 15,
-      "text": "Что такое поток (stream) в Node.js?",
+      "text": "Как изменение состояния (state) влияет на рендеринг компонента? Приведите пример с useState.",
       "hasOptions": false,
-      "answer": "Поток — это абстракция для работы с последовательными данными (например, чтение файлов, сетевые запросы)."
+      "answer": "📦 <b>Изменение state — главный триггер рендеринга!</b>\n\n<b>Пример с useState:</b>\n<code>function Counter() {\n  const [count, setCount] = useState(0);\n  \n  const increment = () => {\n    setCount(count + 1); // ✅ Вызывает рендеринг\n  };\n  \n  return (\n    &lt;div&gt;\n      &lt;p&gt;Счёт: {count}&lt;/p&gt;\n      &lt;button onClick={increment}&gt;+1&lt;/button&gt;\n    &lt;/div&gt;\n  );\n}</code>\n\n🔍 <b>Что происходит:</b>\n1. При клике вызывается setCount(1)\n2. React планирует рендеринг компонента\n3. Компонент перерисовывается с новым count\n4. React обновляет DOM\n\n⚠️ <b>Важно:</b> setState асинхронный! Состояние обновится не сразу."
     },
     {
       "id": 16,
-      "text": "Какой модуль используется для работы с событиями?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "events", "isCorrect": true },
-        { "id": 2, "text": "eventemitter", "isCorrect": false },
-        { "id": 3, "text": "observer", "isCorrect": false },
-        { "id": 4, "text": "callback", "isCorrect": false }
-      ]
+      "text": "Почему изменение пропсов (props) приводит к повторному рендерингу? Объясните с примером.",
+      "hasOptions": false,
+      "answer": "🎯 <b>Props — это данные от родителя к ребёнку</b>\n\n<b>Пример:</b>\n<code>// Родитель\nfunction Parent() {\n  const [name, setName] = useState('Иван');\n  return &lt;Child name={name} /&gt;; // ✅ Передаём проп\n}\n\n// Ребёнок\nfunction Child({ name }) {\n  console.log('Child рендерится!');\n  return &lt;p&gt;Привет, {name}!&lt;/p&gt;\n}</code>\n\n🔄 <b>Что происходит:</b>\n1. Parent меняет state (name)\n2. Parent перерисовывается\n3. Child получает новый проп name\n4. Child перерисовывается с новым значением\n\n💡 <b>Оптимизация:</b> Используйте React.memo, чтобы Child не рендерился, если пропсы не изменились:\n<code>const Child = React.memo(({ name }) => {\n  return &lt;p&gt;Привет, {name}!&lt;/p&gt;\n});</code>"
     },
     {
       "id": 17,
-      "text": "Какой метод используется для записи данных в файл?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "fs.writeFile", "isCorrect": true },
-        { "id": 2, "text": "fs.saveFile", "isCorrect": false },
-        { "id": 3, "text": "fs.append", "isCorrect": false },
-        { "id": 4, "text": "fs.createFile", "isCorrect": false }
-      ]
+      "text": "Как контекст (context) влияет на рендеринг компонентов? Что значит \"каскадный эффект\"?",
+      "hasOptions": false,
+      "answer": "🌊 <b>Context — это глобальное состояние для дерева компонентов</b>\n\n<b>Пример:</b>\n<code>const ThemeContext = createContext();\n\nfunction App() {\n  const [theme, setTheme] = useState('light');\n  return (\n    &lt;ThemeContext.Provider value={theme}&gt;\n      &lt;Header /&gt;\n      &lt;Content /&gt; {/* Использует контекст */}\n    &lt;/ThemeContext.Provider&gt;\n  );\n}\n\nfunction Content() {\n  const theme = useContext(ThemeContext);\n  return &lt;div&gt;Тема: {theme}&lt;/div&gt;;\n}</code>\n\n🔄 <b>Каскадный эффект:</b>\nКогда Provider обновляется (theme меняется), ВСЕ компоненты, использующие useContext(ThemeContext), перерисовываются — даже если они глубоко вложены!\n\n⚠️ <b>Проблема:</b> Если много компонентов используют контекст, все они перерисуются.\n\n💡 <b>Решение:</b> Разделяйте контексты или используйте useMemo для значений Provider."
     },
     {
       "id": 18,
-      "text": "Что такое process.env?",
+      "text": "Что такое forceUpdate в классовых компонентах и когда его использовать?",
       "hasOptions": false,
-      "answer": "process.env — это объект, содержащий переменные окружения процесса Node.js."
+      "answer": "⚡ <b>forceUpdate() — принудительный рендеринг</b>\n\n<b>Пример:</b>\n<code>class MyComponent extends React.Component {\n  handleClick = () => {\n    // Изменяем данные напрямую (плохая практика!)\n    this.data = { value: Math.random() };\n    this.forceUpdate(); // ⚠️ Принудительный рендер\n  };\n  \n  render() {\n    return &lt;button onClick={this.handleClick}&gt;Обновить&lt;/button&gt;\n  }\n}</code>\n\n❌ <b>Когда НЕ использовать:</b>\n- Почти всегда! Это антипаттерн\n- Если можно использовать setState\n\n✅ <b>Редкие случаи использования:</b>\n- Интеграция со сторонними библиотеками\n- Работа с внешними данными вне React\n\n💡 <b>Лучше:</b> Используйте state или props. В функциональных компонентах forceUpdate нет — используйте useState с фиктивным обновлением:\n<code>const [, forceUpdate] = useReducer(x => x + 1, 0);</code>"
     },
     {
       "id": 19,
-      "text": "Как отловить необработанную ошибку в Node.js?",
+      "text": "Как изменение ключа (key) влияет на компонент в React?",
       "hasOptions": false,
-      "answer": "С помощью process.on('uncaughtException', fn) можно обработать необработанные ошибки."
+      "answer": "🔑 <b>Key — это идентификатор элемента для React</b>\n\n<b>Пример:</b>\n<code>function UserProfile({ userId }) {\n  const [data, setData] = useState(null);\n  \n  useEffect(() => {\n    fetchUser(userId).then(setData);\n  }, [userId]);\n  \n  return &lt;div&gt;{data?.name}&lt;/div&gt;\n}\n\n// Использование с key\n&lt;UserProfile key={userId} userId={userId} /&gt;</code>\n\n🔄 <b>Что происходит при изменении key:</b>\n1. React считает это НОВЫМ компонентом\n2. Старый компонент размонтируется (unmount)\n3. Новый компонент монтируется (mount)\n4. State полностью сбрасывается!\n\n💡 <b>Когда использовать:</b>\n- Сброс формы при смене пользователя\n- Сброс анимации\n- Принудительный ремонтаж компонента\n\n⚠️ <b>Важно:</b> Не используйте индексы массива как key в динамических списках!"
     },
     {
       "id": 20,
-      "text": "Какой метод используется для установки таймера?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "setTimeout", "isCorrect": true },
-        { "id": 2, "text": "setInterval", "isCorrect": false },
-        { "id": 3, "text": "setImmediate", "isCorrect": false },
-        { "id": 4, "text": "setTimer", "isCorrect": false }
-      ]
+      "text": "Почему использование нечистых функций может вызвать ненужный рендеринг?",
+      "hasOptions": false,
+      "answer": "🧪 <b>Чистая vs Нечистая функция</b>\n\n<b>❌ Нечистая функция (плохо):</b>\n<code>let counter = 0;\n\nfunction ImpureComponent() {\n  counter++; // ⚠️ Побочный эффект!\n  return &lt;div&gt;Рендер #{counter}&lt;/div&gt;\n}</code>\n\n<b>✅ Чистая функция (хорошо):</b>\n<code>function PureComponent({ count }) {\n  return &lt;div&gt;Рендер #{count}&lt;/div&gt;\n}</code>\n\n🔍 <b>Проблемы нечистых функций:</b>\n1. Непредсказуемое поведение\n2. Сложно отлаживать\n3. React может рендерить компонент дважды в Strict Mode\n4. Проблемы с мемоизацией (React.memo не работает)\n\n💡 <b>Правило:</b> Компонент должен быть чистой функцией:\n- Одинаковые props → одинаковый результат\n- Без побочных эффектов в render\n- Побочные эффекты только в useEffect/обработчиках событий"
     },
     {
       "id": 21,
-      "text": "Какой модуль позволяет создавать веб-сервер?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "http", "isCorrect": true },
-        { "id": 2, "text": "net", "isCorrect": false },
-        { "id": 3, "text": "dns", "isCorrect": false },
-        { "id": 4, "text": "stream", "isCorrect": false }
-      ]
+      "text": "Как перерисовка родительского компонента влияет на дочерние? Объясните с примером.",
+      "hasOptions": false,
+      "answer": "👨‍👧 <b>Родитель рендерится → дети рендерятся</b>\n\n<b>Пример:</b>\n<code>function Parent() {\n  const [count, setCount] = useState(0);\n  console.log('Parent render');\n  \n  return (\n    &lt;div&gt;\n      &lt;button onClick={() => setCount(count + 1)}&gt;{count}&lt;/button&gt;\n      &lt;Child /&gt; {/* ⚠️ Перерисуется, даже без пропсов! */}\n    &lt;/div&gt;\n  );\n}\n\nfunction Child() {\n  console.log('Child render'); // Вызовется при каждом клике!\n  return &lt;p&gt;Я дочерний компонент&lt;/p&gt;\n}</code>\n\n🔄 <b>Что происходит:</b>\n1. Клик → Parent обновляет state\n2. Parent рендерится\n3. Child рендерится автоматически (даже если пропсы не изменились!)\n\n💡 <b>Оптимизация с React.memo:</b>\n<code>const Child = React.memo(() => {\n  console.log('Child render'); // Теперь не вызовется!\n  return &lt;p&gt;Я дочерний компонент&lt;/p&gt;\n});</code>\n\n✅ Теперь Child рендерится только при изменении пропсов!"
     },
     {
       "id": 22,
-      "text": "Какой командой обновить все пакеты в проекте?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "npm update", "isCorrect": true },
-        { "id": 2, "text": "npm upgrade", "isCorrect": false },
-        { "id": 3, "text": "npm refresh", "isCorrect": false },
-        { "id": 4, "text": "npm install-all", "isCorrect": false }
-      ]
+      "text": "Как асинхронные операции, такие как useEffect, косвенно вызывают рендеринг?",
+      "hasOptions": false,
+      "answer": "⏱️ <b>useEffect сам по себе НЕ вызывает рендеринг</b>\n\n<b>Пример:</b>\n<code>function UserData({ userId }) {\n  const [user, setUser] = useState(null);\n  const [loading, setLoading] = useState(true);\n  \n  useEffect(() => {\n    setLoading(true); // ✅ Рендеринг #1\n    \n    fetch(`/api/users/${userId}`)\n      .then(res => res.json())\n      .then(data => {\n        setUser(data);      // ✅ Рендеринг #2\n        setLoading(false);  // ✅ Рендеринг #3\n      });\n  }, [userId]);\n  \n  if (loading) return &lt;div&gt;Загрузка...&lt;/div&gt;\n  return &lt;div&gt;{user.name}&lt;/div&gt;\n}</code>\n\n🔄 <b>Цепочка рендеров:</b>\n1. Компонент монтируется → useEffect запускается\n2. setLoading(true) → рендеринг\n3. Fetch завершается → setUser(data) → рендеринг\n4. setLoading(false) → рендеринг\n\n💡 <b>Оптимизация:</b>\n<code>setUser(data);\nsetLoading(false);\n// React 18 автоматически батчит оба обновления в один рендер!</code>"
     },
     {
       "id": 23,
-      "text": "Что такое асинхронность в Node.js?",
+      "text": "Что такое Strict Mode в React и как он влияет на рендеринг в разработке?",
       "hasOptions": false,
-      "answer": "Асинхронность — это возможность выполнять операции без блокировки основного потока, используя колбэки, промисы или async/await."
+      "answer": "🔍 <b>Strict Mode — режим строгой проверки</b>\n\n<b>Использование:</b>\n<code>&lt;React.StrictMode&gt;\n  &lt;App /&gt;\n&lt;/React.StrictMode&gt;</code>\n\n🎯 <b>Что делает Strict Mode:</b>\n1. ⚠️ Рендерит компоненты ДВАЖДЫ (только в dev режиме!)\n2. Проверяет устаревшие методы жизненного цикла\n3. Предупреждает о небезопасных побочных эффектах\n4. Проверяет устаревшие API\n\n<b>Пример двойного рендера:</b>\n<code>function MyComponent() {\n  console.log('Render'); // Выведется 2 раза в dev!\n  return &lt;div&gt;Hello&lt;/div&gt;\n}</code>\n\n💡 <b>Зачем двойной рендер?</b>\nПомогает найти нечистые функции и побочные эффекты:\n<code>// ❌ Плохо — будет видно в Strict Mode\nlet count = 0;\nfunction Bad() {\n  count++; // Побочный эффект!\n  return &lt;div&gt;{count}&lt;/div&gt;\n}</code>\n\n✅ <b>В production:</b> Strict Mode не влияет на производительность!"
     },
     {
       "id": 24,
-      "text": "Какой метод позволяет читать данные из stdin?",
+      "text": "Как Error Boundaries влияют на рендеринг при ошибках?",
       "hasOptions": false,
-      "answer": "process.stdin.on('data', fn) — позволяет читать данные из стандартного ввода."
+      "answer": "🛡️ <b>Error Boundary — ловушка для ошибок рендеринга</b>\n\n<b>Пример:</b>\n<code>class ErrorBoundary extends React.Component {\n  state = { hasError: false };\n  \n  static getDerivedStateFromError(error) {\n    return { hasError: true }; // ✅ Обновляет state → рендеринг\n  }\n  \n  componentDidCatch(error, info) {\n    console.error('Ошибка:', error, info);\n  }\n  \n  render() {\n    if (this.state.hasError) {\n      return &lt;h1&gt;Что-то пошло не так 😢&lt;/h1&gt;\n    }\n    return this.props.children;\n  }\n}\n\n// Использование\n&lt;ErrorBoundary&gt;\n  &lt;MyComponent /&gt;\n&lt;/ErrorBoundary&gt;</code>\n\n🔄 <b>Что происходит при ошибке:</b>\n1. MyComponent выбрасывает ошибку\n2. getDerivedStateFromError обновляет state\n3. ErrorBoundary рендерится с запасным UI\n4. Дочерние компоненты не рендерятся\n\n⚠️ <b>Не ловит:</b> Ошибки в обработчиках событий, async коде, SSR"
     },
     {
       "id": 25,
-      "text": "Какой модуль используется для работы с буферами?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "buffer", "isCorrect": true },
-        { "id": 2, "text": "stream", "isCorrect": false },
-        { "id": 3, "text": "os", "isCorrect": false },
-        { "id": 4, "text": "arraybuffer", "isCorrect": false }
-      ]
+      "text": "Что такое React.memo и когда его использовать для оптимизации?",
+      "hasOptions": false,
+      "answer": "🚀 <b>React.memo — мемоизация компонента</b>\n\n<b>Без оптимизации:</b>\n<code>function ExpensiveChild({ data }) {\n  console.log('Рендер!'); // Вызывается при каждом рендере родителя\n  return &lt;div&gt;{data}&lt;/div&gt;\n}</code>\n\n<b>✅ С React.memo:</b>\n<code>const ExpensiveChild = React.memo(({ data }) => {\n  console.log('Рендер!'); // Вызывается только при изменении data\n  return &lt;div&gt;{data}&lt;/div&gt;\n});</code>\n\n🎯 <b>Когда использовать:</b>\n1. Компонент рендерится часто с одинаковыми пропсами\n2. Компонент тяжёлый (много вычислений)\n3. Компонент в списке\n\n❌ <b>Когда НЕ использовать:</b>\n1. Пропсы меняются при каждом рендере\n2. Компонент лёгкий\n3. Преждевременная оптимизация\n\n💡 <b>Кастомное сравнение:</b>\n<code>const Child = React.memo(Component, (prevProps, nextProps) => {\n  return prevProps.id === nextProps.id; // true = не рендерить\n});</code>"
     },
     {
       "id": 26,
-      "text": "Какой метод используется для обработки ошибок в асинхронных функциях?",
+      "text": "Объясните разницу между useMemo и useCallback с примерами.",
       "hasOptions": false,
-      "answer": "try/catch внутри async/await функции или обработка промиса через .catch()."
+      "answer": "🔄 <b>useMemo vs useCallback</b>\n\n<b>useMemo — мемоизирует ЗНАЧЕНИЕ:</b>\n<code>function Component({ items }) {\n  // ✅ Вычисляется только при изменении items\n  const total = useMemo(() => {\n    return items.reduce((sum, item) => sum + item.price, 0);\n  }, [items]);\n  \n  return &lt;div&gt;Итого: {total}&lt;/div&gt;\n}</code>\n\n<b>useCallback — мемоизирует ФУНКЦИЮ:</b>\n<code>function Parent() {\n  const [count, setCount] = useState(0);\n  \n  // ✅ Функция создаётся один раз\n  const handleClick = useCallback(() => {\n    console.log('Клик!');\n  }, []); // Без зависимостей\n  \n  return &lt;Child onClick={handleClick} /&gt;\n}</code>\n\n📊 <b>Сравнение:</b>\n• useMemo(() => value, deps) → возвращает value\n• useCallback(fn, deps) → возвращает fn\n• useCallback(fn, deps) === useMemo(() => fn, deps)\n\n💡 <b>Когда использовать:</b>\n• useMemo: тяжёлые вычисления, объекты/массивы для пропсов\n• useCallback: функции для пропсов мемоизированных компонентов"
     },
     {
       "id": 27,
-      "text": "Какой модуль позволяет запускать дочерние процессы?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "child_process", "isCorrect": true },
-        { "id": 2, "text": "process", "isCorrect": false },
-        { "id": 3, "text": "worker_threads", "isCorrect": false },
-        { "id": 4, "text": "cluster", "isCorrect": false }
-      ]
+      "text": "Когда использовать useReducer вместо useState?",
+      "hasOptions": false,
+      "answer": "🎛️ <b>useReducer — для сложного состояния</b>\n\n<b>useState (простое состояние):</b>\n<code>const [count, setCount] = useState(0);\nsetCount(count + 1);</code>\n\n<b>useReducer (сложная логика):</b>\n<code>const initialState = { count: 0, history: [] };\n\nfunction reducer(state, action) {\n  switch (action.type) {\n    case 'increment':\n      return {\n        count: state.count + 1,\n        history: [...state.history, state.count]\n      };\n    case 'decrement':\n      return {\n        count: state.count - 1,\n        history: [...state.history, state.count]\n      };\n    default:\n      return state;\n  }\n}\n\nconst [state, dispatch] = useReducer(reducer, initialState);\ndispatch({ type: 'increment' });</code>\n\n✅ <b>Используйте useReducer когда:</b>\n1. Состояние — сложный объект\n2. Много связанных обновлений\n3. Следующее состояние зависит от предыдущего\n4. Логика обновления сложная\n\n💡 <b>Используйте useState когда:</b>\nПростое значение (число, строка, boolean)"
     },
     {
       "id": 28,
-      "text": "Что такое require.cache?",
+      "text": "Что такое ленивая загрузка компонентов с React.lazy и Suspense?",
       "hasOptions": false,
-      "answer": "require.cache — это объект, в котором Node.js хранит кэшированные модули, чтобы не загружать их повторно."
+      "answer": "⏳ <b>Ленивая загрузка — загрузка по требованию</b>\n\n<b>Без ленивой загрузки:</b>\n<code>import HeavyComponent from './HeavyComponent';\n// ❌ Загружается сразу, увеличивает bundle</code>\n\n<b>✅ С React.lazy:</b>\n<code>import { lazy, Suspense } from 'react';\n\nconst HeavyComponent = lazy(() => import('./HeavyComponent'));\n\nfunction App() {\n  return (\n    &lt;Suspense fallback={&lt;div&gt;Загрузка...&lt;/div&gt;}&gt;\n      &lt;HeavyComponent /&gt;\n    &lt;/Suspense&gt;\n  );\n}</code>\n\n🎯 <b>Как работает:</b>\n1. HeavyComponent не загружается при старте\n2. Загружается только когда рендерится\n3. Пока загружается — показывается fallback\n4. После загрузки — показывается компонент\n\n💡 <b>Когда использовать:</b>\n• Большие компоненты (графики, редакторы)\n• Модальные окна\n• Роуты в React Router\n\n<b>Пример с роутами:</b>\n<code>const Home = lazy(() => import('./pages/Home'));\nconst About = lazy(() => import('./pages/About'));</code>"
     },
     {
       "id": 29,
-      "text": "Какой модуль используется для создания HTTPS сервера?",
-      "hasOptions": true,
-      "options": [
-        { "id": 1, "text": "https", "isCorrect": true },
-        { "id": 2, "text": "http", "isCorrect": false },
-        { "id": 3, "text": "ssl", "isCorrect": false },
-        { "id": 4, "text": "tls", "isCorrect": false }
-      ]
+      "text": "Как правильно указывать зависимости в useEffect для избежания ненужных вызовов?",
+      "hasOptions": false,
+      "answer": "🎯 <b>Правила зависимостей в useEffect</b>\n\n<b>❌ Плохо — пропущена зависимость:</b>\n<code>useEffect(() => {\n  console.log(count); // count не в зависимостях!\n}, []); // ⚠️ Устаревшее значение</code>\n\n<b>✅ Хорошо — все зависимости указаны:</b>\n<code>useEffect(() => {\n  console.log(count);\n}, [count]); // ✅ Обновится при изменении count</code>\n\n<b>Функции в зависимостях:</b>\n<code>// ❌ Плохо\nconst fetchData = () => fetch('/api');\nuseEffect(() => {\n  fetchData();\n}, [fetchData]); // Бесконечный цикл!\n\n// ✅ Хорошо\nconst fetchData = useCallback(() => fetch('/api'), []);\nuseEffect(() => {\n  fetchData();\n}, [fetchData]);</code>\n\n💡 <b>Правила:</b>\n1. Указывайте ВСЕ используемые переменные из внешней области\n2. Используйте useCallback для функций\n3. Используйте useMemo для объектов/массивов\n4. Пустой [] = выполнится один раз при монтировании"
     },
     {
       "id": 30,
-      "text": "Что делает метод fs.readFile?",
+      "text": "Что такое PureComponent и как он работает в классовых компонентах?",
       "hasOptions": false,
-      "answer": "fs.readFile асинхронно читает содержимое файла и возвращает результат через колбэк или промис."
+      "answer": "🎨 <b>PureComponent — оптимизированный компонент</b>\n\n<b>Обычный Component:</b>\n<code>class Regular extends React.Component {\n  render() {\n    return &lt;div&gt;{this.props.name}&lt;/div&gt;\n  }\n  // Рендерится при каждом обновлении родителя\n}</code>\n\n<b>✅ PureComponent:</b>\n<code>class Pure extends React.PureComponent {\n  render() {\n    return &lt;div&gt;{this.props.name}&lt;/div&gt;\n  }\n  // Рендерится только если props/state изменились\n}</code>\n\n🔍 <b>Как работает:</b>\nPureComponent автоматически реализует shouldComponentUpdate с поверхностным сравнением (shallow comparison) props и state.\n\n<b>Поверхностное сравнение:</b>\n<code>// Примитивы — сравниваются по значению\noldProps.count === newProps.count // 1 === 1 → true\n\n// Объекты — сравниваются по ссылке\noldProps.user === newProps.user // {...} === {...} → false</code>\n\n💡 <b>Аналог в функциональных компонентах:</b> React.memo"
     },
-
     {
-      "id": 1,
+      "id": 31,
+      "text": "Почему PureComponent использует поверхностное сравнение, и какие у него ограничения?",
+      "hasOptions": false,
+      "answer": "⚖️ <b>Поверхностное vs Глубокое сравнение</b>\n\n<b>Поверхностное (shallow):</b>\n<code>const obj1 = { name: 'Иван', age: 30 };\nconst obj2 = { name: 'Иван', age: 30 };\nobj1 === obj2 // false (разные ссылки!)</code>\n\n<b>Глубокое (deep):</b>\n<code>_.isEqual(obj1, obj2) // true (одинаковое содержимое)</code>\n\n❌ <b>Проблема с PureComponent:</b>\n<code>class List extends React.PureComponent {\n  render() {\n    return &lt;ul&gt;{this.props.items.map(...)}&lt;/ul&gt;\n  }\n}\n\n// В родителе\nthis.state.items.push(newItem); // ⚠️ Мутация!\nthis.setState({ items: this.state.items }); // Та же ссылка!\n// List НЕ перерисуется!</code>\n\n✅ <b>Правильно — иммутабельность:</b>\n<code>this.setState({\n  items: [...this.state.items, newItem] // Новая ссылка\n});</code>\n\n💡 <b>Почему поверхностное?</b>\nГлубокое сравнение медленное для больших объектов. Поверхностное — быстрое, но требует иммутабельности."
+    },
+    {
+      "id": 32,
+      "text": "Как shouldComponentUpdate помогает в оптимизации классовых компонентов?",
+      "hasOptions": false,
+      "answer": "🎛️ <b>shouldComponentUpdate — ручная оптимизация</b>\n\n<b>Без оптимизации:</b>\n<code>class MyComponent extends React.Component {\n  render() {\n    console.log('Render!'); // Вызывается всегда\n    return &lt;div&gt;{this.props.value}&lt;/div&gt;\n  }\n}</code>\n\n<b>✅ С shouldComponentUpdate:</b>\n<code>class MyComponent extends React.Component {\n  shouldComponentUpdate(nextProps, nextState) {\n    // Рендерить только если value изменился\n    return nextProps.value !== this.props.value;\n  }\n  \n  render() {\n    console.log('Render!'); // Вызывается только при изменении value\n    return &lt;div&gt;{this.props.value}&lt;/div&gt;\n  }\n}</code>\n\n🔍 <b>Как работает:</b>\n- Возвращает true → компонент рендерится\n- Возвращает false → рендеринг пропускается\n\n💡 <b>Когда использовать:</b>\n- Сложная логика сравнения\n- Оптимизация тяжёлых компонентов\n- Когда PureComponent недостаточно\n\n⚠️ <b>В функциональных компонентах:</b> Используйте React.memo с кастомным компаратором"
+    },
+    {
+      "id": 33,
+      "text": "Что такое чистый компонент в React и почему он полезен?",
+      "hasOptions": false,
+      "answer": "✨ <b>Чистый компонент = Предсказуемый компонент</b>\n\n<b>Определение:</b>\nЧистый компонент — это компонент, который при одинаковых props всегда возвращает одинаковый результат, без побочных эффектов.\n\n<b>✅ Чистый компонент:</b>\n<code>function PureGreeting({ name }) {\n  return &lt;h1&gt;Привет, {name}!&lt;/h1&gt;\n}\n// name='Иван' → всегда 'Привет, Иван!'</code>\n\n<b>❌ Нечистый компонент:</b>\n<code>let counter = 0;\nfunction ImpureGreeting({ name }) {\n  counter++; // Побочный эффект!\n  return &lt;h1&gt;Привет, {name}! (#{counter})&lt;/h1&gt;\n}\n// name='Иван' → разный результат каждый раз!</code>\n\n🎯 <b>Преимущества чистых компонентов:</b>\n1. Легко тестировать\n2. Легко отлаживать\n3. Можно мемоизировать (React.memo)\n4. Предсказуемое поведение\n5. Работают с Concurrent Mode\n\n💡 <b>Правило:</b> Побочные эффекты только в useEffect и обработчиках событий!"
+    },
+    {
+      "id": 34,
+      "text": "Почему важно использовать key в списках с map? Приведите пример проблемы без key.",
+      "hasOptions": false,
+      "answer": "🔑 <b>Key помогает React идентифицировать элементы</b>\n\n<b>❌ Без key:</b>\n<code>function TodoList({ todos }) {\n  return (\n    &lt;ul&gt;\n      {todos.map(todo => (\n        &lt;li&gt;{todo.text}&lt;/li&gt; {/* ⚠️ Нет key! */}\n      ))}\n    &lt;/ul&gt;\n  );\n}</code>\n\n<b>Проблема:</b>\n<code>// Было: ['A', 'B', 'C']\n// Стало: ['X', 'A', 'B', 'C']\n// React думает:\n// 'A' изменился на 'X' → обновить\n// 'B' изменился на 'A' → обновить\n// 'C' изменился на 'B' → обновить\n// Добавить 'C' → создать\n// ⚠️ 4 операции вместо 1!</code>\n\n<b>✅ С key:</b>\n<code>function TodoList({ todos }) {\n  return (\n    &lt;ul&gt;\n      {todos.map(todo => (\n        &lt;li key={todo.id}&gt;{todo.text}&lt;/li&gt;\n      ))}\n    &lt;/ul&gt;\n  );\n}\n// React видит: добавлен новый элемент с key='X'\n// ✅ 1 операция!</code>\n\n💡 <b>Проблемы без key:</b>\n- Неправильный порядок\n- Потеря состояния (input значения)\n- Плохая производительность"
+    },
+    {
+      "id": 35,
+      "text": "Какие правила использования key в React? Когда индексы можно использовать как key?",
+      "hasOptions": false,
+      "answer": "📋 <b>Правила использования key</b>\n\n<b>✅ Хорошие key:</b>\n<code>// 1. Уникальный ID из базы данных\n{users.map(user => (\n  &lt;User key={user.id} data={user} /&gt;\n))}\n\n// 2. Уникальный идентификатор\n{items.map(item => (\n  &lt;Item key={item.sku} data={item} /&gt;\n))}</code>\n\n<b>⚠️ Индексы (осторожно!):</b>\n<code>// ✅ OK — статичный список, не меняется\nconst COLORS = ['red', 'green', 'blue'];\n{COLORS.map((color, index) => (\n  &lt;div key={index}&gt;{color}&lt;/div&gt;\n))}\n\n// ❌ ПЛОХО — динамический список\n{todos.map((todo, index) => (\n  &lt;Todo key={index} data={todo} /&gt; {/* Проблемы при удалении/добавлении */}\n))}</code>\n\n<b>Проблема с индексами:</b>\n<code>// Было: [A(0), B(1), C(2)]\n// Удалили A\n// Стало: [B(0), C(1)]\n// React думает: B изменился, C изменился\n// ⚠️ Потеря состояния!</code>\n\n💡 <b>Правила:</b>\n1. Key должен быть уникальным среди соседей\n2. Key должен быть стабильным (не меняться)\n3. Не используйте Math.random()"
+    },
+    {
+      "id": 36,
+      "text": "Что такое иммутабельные данные и почему они важны в React?",
+      "hasOptions": false,
+      "answer": "🔒 <b>Иммутабельность = Неизменяемость</b>\n\n<b>❌ Мутация (плохо):</b>\n<code>const user = { name: 'Иван', age: 30 };\nuser.age = 31; // ⚠️ Изменили объект напрямую!\nsetUser(user); // Та же ссылка → React не увидит изменение!</code>\n\n<b>✅ Иммутабельность (хорошо):</b>\n<code>const user = { name: 'Иван', age: 30 };\nconst newUser = { ...user, age: 31 }; // Новый объект\nsetUser(newUser); // Новая ссылка → React увидит изменение!</code>\n\n<b>Массивы:</b>\n<code>// ❌ Мутация\nconst items = [1, 2, 3];\nitems.push(4); // Изменили массив\nsetItems(items); // Не сработает!\n\n// ✅ Иммутабельность\nsetItems([...items, 4]); // Новый массив\nsetItems(items.filter(x => x !== 2)); // Удаление\nsetItems(items.map(x => x * 2)); // Изменение</code>\n\n🎯 <b>Почему важно:</b>\n1. React.memo и PureComponent работают через сравнение ссылок\n2. Легко отследить изменения\n3. Можно реализовать undo/redo\n4. Предсказуемое поведение\n\n💡 <b>Библиотеки:</b> Immer, Immutable.js упрощают работу с иммутабельными данными"
+    },
+    {
+      "id": 37,
+      "text": "Как useEffect взаимодействует с асинхронными операциями, такими как fetch?",
+      "hasOptions": false,
+      "answer": "🌐 <b>useEffect + Fetch = Загрузка данных</b>\n\n<b>✅ Правильный способ:</b>\n<code>function UserProfile({ userId }) {\n  const [user, setUser] = useState(null);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState(null);\n  \n  useEffect(() => {\n    let cancelled = false; // Флаг отмены\n    \n    setLoading(true);\n    fetch(`/api/users/${userId}`)\n      .then(res => res.json())\n      .then(data => {\n        if (!cancelled) { // Проверка отмены\n          setUser(data);\n          setLoading(false);\n        }\n      })\n      .catch(err => {\n        if (!cancelled) {\n          setError(err);\n          setLoading(false);\n        }\n      });\n    \n    return () => {\n      cancelled = true; // Отменяем при размонтировании\n    };\n  }, [userId]);\n  \n  if (loading) return &lt;div&gt;Загрузка...&lt;/div&gt;\n  if (error) return &lt;div&gt;Ошибка: {error.message}&lt;/div&gt;\n  return &lt;div&gt;{user.name}&lt;/div&gt;\n}</code>\n\n⚠️ <b>Важно:</b> Cleanup функция предотвращает обновление размонтированного компонента!"
+    },
+    {
+      "id": 38,
+      "text": "Как избежать гонок данных (race conditions) в useEffect с fetch?",
+      "hasOptions": false,
+      "answer": "🏁 <b>Race Condition — когда запросы приходят не по порядку</b>\n\n<b>❌ Проблема:</b>\n<code>// Пользователь быстро переключается: user1 → user2 → user3\n// Запросы: req1, req2, req3\n// Ответы приходят: res3, res1, res2\n// Показывается user2 вместо user3! ⚠️</code>\n\n<b>✅ Решение 1 — Флаг отмены:</b>\n<code>useEffect(() => {\n  let active = true;\n  \n  fetch(`/api/users/${userId}`)\n    .then(res => res.json())\n    .then(data => {\n      if (active) { // Игнорируем устаревшие ответы\n        setUser(data);\n      }\n    });\n  \n  return () => { active = false; };\n}, [userId]);</code>\n\n<b>✅ Решение 2 — AbortController:</b>\n<code>useEffect(() => {\n  const controller = new AbortController();\n  \n  fetch(`/api/users/${userId}`, {\n    signal: controller.signal\n  })\n    .then(res => res.json())\n    .then(setUser)\n    .catch(err => {\n      if (err.name !== 'AbortError') {\n        console.error(err);\n      }\n    });\n  \n  return () => controller.abort(); // Отменяем запрос\n}, [userId]);</code>"
+    },
+    {
+      "id": 39,
+      "text": "Что такое механизм Reconciliation в React и как он работает?",
+      "hasOptions": false,
+      "answer": "🔄 <b>Reconciliation — процесс сверки и обновления DOM</b>\n\n<b>Как работает:</b>\n1. React создаёт новое виртуальное дерево (Virtual DOM)\n2. Сравнивает с предыдущим деревом (Diffing)\n3. Вычисляет минимальные изменения\n4. Обновляет только изменённые части реального DOM\n\n<b>Алгоритм сравнения:</b>\n<code>// 1. Разные типы элементов → полная замена\n&lt;div&gt; → &lt;span&gt; // Удалить div, создать span\n\n// 2. Одинаковые типы → обновить атрибуты\n&lt;div className=\"old\"&gt; → &lt;div className=\"new\"&gt;\n// Обновить только className\n\n// 3. Дочерние элементы → сравнить по порядку\n&lt;ul&gt;\n  &lt;li&gt;A&lt;/li&gt;\n  &lt;li&gt;B&lt;/li&gt;\n&lt;/ul&gt;\n→\n&lt;ul&gt;\n  &lt;li&gt;A&lt;/li&gt;\n  &lt;li&gt;B&lt;/li&gt;\n  &lt;li&gt;C&lt;/li&gt; {/* Добавить */}\n&lt;/ul&gt;</code>\n\n💡 <b>Оптимизация:</b> Используйте key для списков, чтобы React мог эффективно определять изменения!\n\n🎯 <b>Результат:</b> Быстрые обновления UI без полной перерисовки страницы"
+    },
+    {
+      "id": 40,
+      "text": "Как ключи (keys) помогают в Reconciliation для списков?",
+      "hasOptions": false,
+      "answer": "🔑 <b>Keys помогают React отслеживать элементы</b>\n\n<b>Без key (медленно):</b>\n<code>// Было:\n&lt;ul&gt;\n  &lt;li&gt;A&lt;/li&gt;\n  &lt;li&gt;B&lt;/li&gt;\n&lt;/ul&gt;\n\n// Добавили в начало:\n&lt;ul&gt;\n  &lt;li&gt;Z&lt;/li&gt;\n  &lt;li&gt;A&lt;/li&gt;\n  &lt;li&gt;B&lt;/li&gt;\n&lt;/ul&gt;\n\n// React думает:\n// Позиция 0: A → Z (обновить)\n// Позиция 1: B → A (обновить)\n// Позиция 2: нет → B (создать)\n// ⚠️ 3 операции!</code>\n\n<b>С key (быстро):</b>\n<code>// Было:\n&lt;ul&gt;\n  &lt;li key=\"a\"&gt;A&lt;/li&gt;\n  &lt;li key=\"b\"&gt;B&lt;/li&gt;\n&lt;/ul&gt;\n\n// Добавили:\n&lt;ul&gt;\n  &lt;li key=\"z\"&gt;Z&lt;/li&gt;\n  &lt;li key=\"a\"&gt;A&lt;/li&gt;\n  &lt;li key=\"b\"&gt;B&lt;/li&gt;\n&lt;/ul&gt;\n\n// React видит:\n// key=\"z\" — новый элемент (создать)\n// key=\"a\" — существует (переместить)\n// key=\"b\" — существует (переместить)\n// ✅ 1 операция создания, 2 перемещения (быстро!)</code>\n\n💡 <b>Вывод:</b> Keys позволяют React понять, какие элементы изменились, добавились или удалились"
+    },
+    {
+      "id": 41,
+      "text": "Что такое Context в React и когда его использовать?",
+      "hasOptions": false,
+      "answer": "🌐 <b>Context — глобальное состояние без prop drilling</b>\n\n<b>Проблема без Context (prop drilling):</b>\n<code>function App() {\n  const user = { name: 'Иван' };\n  return &lt;Level1 user={user} /&gt;;\n}\n\nfunction Level1({ user }) {\n  return &lt;Level2 user={user} /&gt;; // Пробрасываем\n}\n\nfunction Level2({ user }) {\n  return &lt;Level3 user={user} /&gt;; // Пробрасываем\n}\n\nfunction Level3({ user }) {\n  return &lt;div&gt;{user.name}&lt;/div&gt;; // Наконец используем!\n}</code>\n\n<b>✅ Решение с Context:</b>\n<code>const UserContext = createContext();\n\nfunction App() {\n  const user = { name: 'Иван' };\n  return (\n    &lt;UserContext.Provider value={user}&gt;\n      &lt;Level1 /&gt;\n    &lt;/UserContext.Provider&gt;\n  );\n}\n\nfunction Level3() {\n  const user = useContext(UserContext); // Прямой доступ!\n  return &lt;div&gt;{user.name}&lt;/div&gt;\n}</code>\n\n🎯 <b>Когда использовать:</b>\n• Тема (светлая/тёмная)\n• Язык интерфейса\n• Данные авторизации\n• Настройки приложения\n\n⚠️ <b>Не используйте для:</b> Часто меняющихся данных (используйте state management)"
+    },
+    {
+      "id": 42,
+      "text": "Как создать и использовать Context с Provider и useContext?",
+      "hasOptions": false,
+      "answer": "📦 <b>Полный пример Context</b>\n\n<b>1. Создание Context:</b>\n<code>import { createContext, useState, useContext } from 'react';\n\nconst ThemeContext = createContext();</code>\n\n<b>2. Provider компонент:</b>\n<code>function ThemeProvider({ children }) {\n  const [theme, setTheme] = useState('light');\n  \n  const toggleTheme = () => {\n    setTheme(prev => prev === 'light' ? 'dark' : 'light');\n  };\n  \n  return (\n    &lt;ThemeContext.Provider value={{ theme, toggleTheme }}&gt;\n      {children}\n    &lt;/ThemeContext.Provider&gt;\n  );\n}</code>\n\n<b>3. Кастомный хук (опционально):</b>\n<code>function useTheme() {\n  const context = useContext(ThemeContext);\n  if (!context) {\n    throw new Error('useTheme must be used within ThemeProvider');\n  }\n  return context;\n}</code>\n\n<b>4. Использование:</b>\n<code>function App() {\n  return (\n    &lt;ThemeProvider&gt;\n      &lt;Header /&gt;\n      &lt;Content /&gt;\n    &lt;/ThemeProvider&gt;\n  );\n}\n\nfunction Header() {\n  const { theme, toggleTheme } = useTheme();\n  return (\n    &lt;header className={theme}&gt;\n      &lt;button onClick={toggleTheme}&gt;Сменить тему&lt;/button&gt;\n    &lt;/header&gt;\n  );\n}</code>"
+    },
+    {
+      "id": 43,
+      "text": "Зачем нужен React Fragment и когда его использовать вместо div?",
+      "hasOptions": false,
+      "answer": "📦 <b>Fragment — группировка без лишних DOM узлов</b>\n\n<b>❌ Проблема с div:</b>\n<code>function Table() {\n  return (\n    &lt;table&gt;\n      &lt;tbody&gt;\n        &lt;TableRow /&gt;\n      &lt;/tbody&gt;\n    &lt;/table&gt;\n  );\n}\n\nfunction TableRow() {\n  return (\n    &lt;div&gt; {/* ⚠️ Невалидный HTML! */}\n      &lt;td&gt;Ячейка 1&lt;/td&gt;\n      &lt;td&gt;Ячейка 2&lt;/td&gt;\n    &lt;/div&gt;\n  );\n}</code>\n\n<b>✅ Решение с Fragment:</b>\n<code>function TableRow() {\n  return (\n    &lt;React.Fragment&gt;\n      &lt;td&gt;Ячейка 1&lt;/td&gt;\n      &lt;td&gt;Ячейка 2&lt;/td&gt;\n    &lt;/React.Fragment&gt;\n  );\n}\n\n// Короткий синтаксис:\nfunction TableRow() {\n  return (\n    &lt;&gt;\n      &lt;td&gt;Ячейка 1&lt;/td&gt;\n      &lt;td&gt;Ячейка 2&lt;/td&gt;\n    &lt;/&gt;\n  );\n}</code>\n\n🎯 <b>Преимущества:</b>\n• Не создаёт лишние DOM узлы\n• Валидный HTML\n• Чище инспектор браузера\n• Лучше производительность\n\n💡 <b>С key:</b>\n<code>&lt;React.Fragment key={item.id}&gt;...&lt;/React.Fragment&gt;</code>"
+    },
+    {
+      "id": 44,
+      "text": "Что такое хуки в React и почему они предпочтительнее классов?",
+      "hasOptions": false,
+      "answer": "🪝 <b>Хуки — функции для работы с состоянием и эффектами</b>\n\n<b>До хуков (классы):</b>\n<code>class Counter extends React.Component {\n  state = { count: 0 };\n  \n  componentDidMount() {\n    document.title = `Счёт: ${this.state.count}`;\n  }\n  \n  componentDidUpdate() {\n    document.title = `Счёт: ${this.state.count}`;\n  }\n  \n  render() {\n    return (\n      &lt;button onClick={() => this.setState({ count: this.state.count + 1 })}&gt;\n        {this.state.count}\n      &lt;/button&gt;\n    );\n  }\n}</code>\n\n<b>✅ С хуками (функции):</b>\n<code>function Counter() {\n  const [count, setCount] = useState(0);\n  \n  useEffect(() => {\n    document.title = `Счёт: ${count}`;\n  }, [count]);\n  \n  return &lt;button onClick={() => setCount(count + 1)}&gt;{count}&lt;/button&gt;\n}</code>\n\n🎯 <b>Преимущества хуков:</b>\n1. Меньше кода\n2. Легче переиспользовать логику (кастомные хуки)\n3. Нет проблем с this\n4. Легче тестировать\n5. Лучше композиция"
+    },
+    {
+      "id": 45,
+      "text": "Объясните useState с примером счётчика.",
+      "hasOptions": false,
+      "answer": "🔢 <b>useState — хук для состояния</b>\n\n<b>Базовый пример:</b>\n<code>function Counter() {\n  // [текущее значение, функция обновления]\n  const [count, setCount] = useState(0); // 0 — начальное значение\n  \n  return (\n    &lt;div&gt;\n      &lt;p&gt;Счёт: {count}&lt;/p&gt;\n      &lt;button onClick={() => setCount(count + 1)}&gt;+1&lt;/button&gt;\n      &lt;button onClick={() => setCount(count - 1)}&gt;-1&lt;/button&gt;\n      &lt;button onClick={() => setCount(0)}&gt;Сброс&lt;/button&gt;\n    &lt;/div&gt;\n  );\n}</code>\n\n<b>Функциональное обновление:</b>\n<code>// ❌ Плохо — может быть устаревшее значение\nsetCount(count + 1);\n\n// ✅ Хорошо — всегда актуальное значение\nsetCount(prevCount => prevCount + 1);</code>\n\n<b>Множественные клики:</b>\n<code>function handleClick() {\n  setCount(count + 1); // count = 0 → 1\n  setCount(count + 1); // count = 0 → 1 (устаревшее!)\n  // Результат: 1 ⚠️\n  \n  // Правильно:\n  setCount(c => c + 1); // 0 → 1\n  setCount(c => c + 1); // 1 → 2\n  // Результат: 2 ✅\n}</code>"
+    },
+    {
+      "id": 46,
+      "text": "Как работает useEffect? Приведите пример с загрузкой данных.",
+      "hasOptions": false,
+      "answer": "⚡ <b>useEffect — хук для побочных эффектов</b>\n\n<b>Пример загрузки данных:</b>\n<code>function UserProfile({ userId }) {\n  const [user, setUser] = useState(null);\n  const [loading, setLoading] = useState(true);\n  \n  useEffect(() => {\n    // Эффект выполняется после рендера\n    setLoading(true);\n    \n    fetch(`/api/users/${userId}`)\n      .then(res => res.json())\n      .then(data => {\n        setUser(data);\n        setLoading(false);\n      });\n    \n    // Cleanup функция (опционально)\n    return () => {\n      console.log('Компонент размонтируется');\n    };\n  }, [userId]); // Зависимости — перезапуск при изменении userId\n  \n  if (loading) return &lt;div&gt;Загрузка...&lt;/div&gt;\n  return &lt;div&gt;{user.name}&lt;/div&gt;\n}</code>\n\n📋 <b>Варианты зависимостей:</b>\n<code>useEffect(() => {}, []); // Один раз при монтировании\nuseEffect(() => {}, [a, b]); // При изменении a или b\nuseEffect(() => {}); // После каждого рендера</code>\n\n💡 <b>Когда использовать:</b> Fetch, подписки, таймеры, изменение DOM, логирование"
+    },
+    {
+      "id": 47,
+      "text": "Что такое useContext и как он решает проблему prop drilling?",
+      "hasOptions": false,
+      "answer": "🌐 <b>useContext — доступ к контексту</b>\n\n<b>❌ Проблема (prop drilling):</b>\n<code>function App() {\n  const theme = 'dark';\n  return &lt;Parent theme={theme} /&gt;;\n}\n\nfunction Parent({ theme }) {\n  return &lt;Child theme={theme} /&gt;; // Пробрасываем\n}\n\nfunction Child({ theme }) {\n  return &lt;GrandChild theme={theme} /&gt;; // Пробрасываем\n}\n\nfunction GrandChild({ theme }) {\n  return &lt;div className={theme}&gt;Контент&lt;/div&gt;\n}</code>\n\n<b>✅ Решение с useContext:</b>\n<code>const ThemeContext = createContext();\n\nfunction App() {\n  const theme = 'dark';\n  return (\n    &lt;ThemeContext.Provider value={theme}&gt;\n      &lt;Parent /&gt; {/* Не нужны пропсы! */}\n    &lt;/ThemeContext.Provider&gt;\n  );\n}\n\nfunction GrandChild() {\n  const theme = useContext(ThemeContext); // Прямой доступ!\n  return &lt;div className={theme}&gt;Контент&lt;/div&gt;\n}</code>\n\n💡 <b>Преимущества:</b>\n• Нет промежуточных пропсов\n• Легче рефакторинг\n• Чище код"
+    },
+    {
+      "id": 48,
+      "text": "Как использовать useRef для доступа к DOM-элементу?",
+      "hasOptions": false,
+      "answer": "🎯 <b>useRef — ссылка на DOM элемент</b>\n\n<b>Пример — фокус на input:</b>\n<code>function SearchInput() {\n  const inputRef = useRef(null);\n  \n  const handleClick = () => {\n    inputRef.current.focus(); // Фокус на input\n  };\n  \n  return (\n    &lt;div&gt;\n      &lt;input ref={inputRef} type=\"text\" /&gt;\n      &lt;button onClick={handleClick}&gt;Фокус&lt;/button&gt;\n    &lt;/div&gt;\n  );\n}</code>\n\n<b>Пример — скролл к элементу:</b>\n<code>function ScrollToTop() {\n  const topRef = useRef(null);\n  \n  const scrollToTop = () => {\n    topRef.current.scrollIntoView({ behavior: 'smooth' });\n  };\n  \n  return (\n    &lt;div&gt;\n      &lt;div ref={topRef}&gt;Верх страницы&lt;/div&gt;\n      {/* Много контента */}\n      &lt;button onClick={scrollToTop}&gt;↑ Наверх&lt;/button&gt;\n    &lt;/div&gt;\n  );\n}</code>\n\n💡 <b>Важно:</b> useRef не вызывает рендеринг при изменении! Используйте для:\n• Доступа к DOM\n• Хранения мутабельных значений\n• Предыдущих значений"
+    },
+    {
+      "id": 49,
+      "text": "Когда использовать useReducer для сложного состояния? Приведите пример с TODO-листом.",
+      "hasOptions": false,
+      "answer": "📝 <b>useReducer для TODO-листа</b>\n\n<code>function todoReducer(state, action) {\n  switch (action.type) {\n    case 'ADD':\n      return [...state, { id: Date.now(), text: action.text, done: false }];\n    case 'TOGGLE':\n      return state.map(todo =>\n        todo.id === action.id ? { ...todo, done: !todo.done } : todo\n      );\n    case 'DELETE':\n      return state.filter(todo => todo.id !== action.id);\n    default:\n      return state;\n  }\n}\n\nfunction TodoApp() {\n  const [todos, dispatch] = useReducer(todoReducer, []);\n  const [text, setText] = useState('');\n  \n  const addTodo = () => {\n    dispatch({ type: 'ADD', text });\n    setText('');\n  };\n  \n  return (\n    &lt;div&gt;\n      &lt;input value={text} onChange={e => setText(e.target.value)} /&gt;\n      &lt;button onClick={addTodo}&gt;Добавить&lt;/button&gt;\n      \n      {todos.map(todo => (\n        &lt;div key={todo.id}&gt;\n          &lt;input\n            type=\"checkbox\"\n            checked={todo.done}\n            onChange={() => dispatch({ type: 'TOGGLE', id: todo.id })}\n          /&gt;\n          {todo.text}\n          &lt;button onClick={() => dispatch({ type: 'DELETE', id: todo.id })}&gt;\n            ✕\n          &lt;/button&gt;\n        &lt;/div&gt;\n      ))}\n    &lt;/div&gt;\n  );\n}</code>"
+    },
+    {
+      "id": 50,
+      "text": "Что такое useMemo и в каких случаях оно полезно?",
+      "hasOptions": false,
+      "answer": "💾 <b>useMemo — мемоизация вычислений</b>\n\n<b>❌ Без useMemo (медленно):</b>\n<code>function ProductList({ products, filter }) {\n  // Фильтрация при КАЖДОМ рендере!\n  const filtered = products.filter(p => p.category === filter);\n  \n  return &lt;div&gt;{filtered.map(...)}&lt;/div&gt;\n}</code>\n\n<b>✅ С useMemo (быстро):</b>\n<code>function ProductList({ products, filter }) {\n  // Фильтрация только при изменении products или filter\n  const filtered = useMemo(() => {\n    console.log('Фильтрация...');\n    return products.filter(p => p.category === filter);\n  }, [products, filter]);\n  \n  return &lt;div&gt;{filtered.map(...)}&lt;/div&gt;\n}</code>\n\n<b>Пример — тяжёлые вычисления:</b>\n<code>function Fibonacci({ n }) {\n  const result = useMemo(() => {\n    // Тяжёлая рекурсия\n    const fib = (num) => num <= 1 ? num : fib(num - 1) + fib(num - 2);\n    return fib(n);\n  }, [n]);\n  \n  return &lt;div&gt;Fibonacci({n}) = {result}&lt;/div&gt;\n}</code>\n\n🎯 <b>Когда использовать:</b>\n• Тяжёлые вычисления\n• Фильтрация/сортировка больших массивов\n• Создание объектов/массивов для пропсов"
+    },
+    {
+      "id": 51,
+      "text": "Разница между useMemo и useCallback? Приведите примеры.",
+      "hasOptions": false,
+      "answer": "🔄 <b>useMemo vs useCallback</b>\n\n<b>useMemo — мемоизирует РЕЗУЛЬТАТ:</b>\n<code>const expensiveValue = useMemo(() => {\n  return computeExpensiveValue(a, b);\n}, [a, b]);\n// Возвращает: результат вычисления</code>\n\n<b>useCallback — мемоизирует ФУНКЦИЮ:</b>\n<code>const memoizedCallback = useCallback(() => {\n  doSomething(a, b);\n}, [a, b]);\n// Возвращает: саму функцию</code>\n\n<b>Практический пример:</b>\n<code>function Parent() {\n  const [count, setCount] = useState(0);\n  const [text, setText] = useState('');\n  \n  // ❌ Создаётся новая функция при каждом рендере\n  const handleClick = () => console.log('Click');\n  \n  // ✅ Функция создаётся один раз\n  const handleClickMemo = useCallback(() => {\n    console.log('Click');\n  }, []);\n  \n  return (\n    &lt;div&gt;\n      &lt;input value={text} onChange={e => setText(e.target.value)} /&gt;\n      &lt;Child onClick={handleClickMemo} /&gt; {/* Не перерисуется */}\n    &lt;/div&gt;\n  );\n}\n\nconst Child = React.memo(({ onClick }) => {\n  console.log('Child render');\n  return &lt;button onClick={onClick}&gt;Кнопка&lt;/button&gt;\n});</code>\n\n💡 <b>Правило:</b>\nuseCallback(fn, deps) === useMemo(() => fn, deps)"
+    },
+    {
+      "id": 52,
+      "text": "Что такое useLayoutEffect и когда его использовать вместо useEffect?",
+      "hasOptions": false,
+      "answer": "⚡ <b>useLayoutEffect — синхронный эффект</b>\n\n<b>Разница с useEffect:</b>\n<code>// useEffect — асинхронный\nuseEffect(() => {\n  // Выполняется ПОСЛЕ отрисовки на экране\n}, []);\n\n// useLayoutEffect — синхронный\nuseLayoutEffect(() => {\n  // Выполняется ДО отрисовки на экране\n}, []);</code>\n\n<b>Пример проблемы с useEffect:</b>\n<code>function Tooltip() {\n  const [position, setPosition] = useState({ top: 0, left: 0 });\n  const ref = useRef();\n  \n  useEffect(() => {\n    const rect = ref.current.getBoundingClientRect();\n    setPosition({ top: rect.bottom, left: rect.left });\n  }, []);\n  \n  // ⚠️ Мигание! Сначала рендер в (0,0), потом обновление\n  return &lt;div ref={ref} style={position}&gt;Tooltip&lt;/div&gt;\n}</code>\n\n<b>✅ Решение с useLayoutEffect:</b>\n<code>useLayoutEffect(() => {\n  const rect = ref.current.getBoundingClientRect();\n  setPosition({ top: rect.bottom, left: rect.left });\n}, []);\n// Позиция вычисляется ДО отрисовки — нет мигания!</code>\n\n🎯 <b>Когда использовать:</b>\n• Измерение DOM\n• Синхронизация с DOM\n• Предотвращение мигания\n\n⚠️ <b>Осторожно:</b> Блокирует отрисовку! Используйте редко."
+    },
+    {
+      "id": 53,
+      "text": "Приведите пример кастомного хука useLocalStorage.",
+      "hasOptions": false,
+      "answer": "💾 <b>Кастомный хук useLocalStorage</b>\n\n<code>function useLocalStorage(key, initialValue) {\n  // Получаем значение из localStorage или используем начальное\n  const [value, setValue] = useState(() => {\n    try {\n      const item = window.localStorage.getItem(key);\n      return item ? JSON.parse(item) : initialValue;\n    } catch (error) {\n      console.error(error);\n      return initialValue;\n    }\n  });\n  \n  // Сохраняем в localStorage при изменении\n  const setStoredValue = (newValue) => {\n    try {\n      setValue(newValue);\n      window.localStorage.setItem(key, JSON.stringify(newValue));\n    } catch (error) {\n      console.error(error);\n    }\n  };\n  \n  return [value, setStoredValue];\n}\n\n// Использование:\nfunction App() {\n  const [name, setName] = useLocalStorage('userName', 'Гость');\n  const [theme, setTheme] = useLocalStorage('theme', 'light');\n  \n  return (\n    &lt;div&gt;\n      &lt;input value={name} onChange={e => setName(e.target.value)} /&gt;\n      &lt;button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}&gt;\n        Тема: {theme}\n      &lt;/button&gt;\n    &lt;/div&gt;\n  );\n}</code>"
+    },
+    {
+      "id": 54,
+      "text": "Как создать кастомный хук useFetch для API-запросов?",
+      "hasOptions": false,
+      "answer": "🌐 <b>Кастомный хук useFetch</b>\n\n<code>function useFetch(url) {\n  const [data, setData] = useState(null);\n  const [loading, setLoading] = useState(true);\n  const [error, setError] = useState(null);\n  \n  useEffect(() => {\n    let cancelled = false;\n    \n    const fetchData = async () => {\n      setLoading(true);\n      setError(null);\n      \n      try {\n        const response = await fetch(url);\n        if (!response.ok) throw new Error('Ошибка загрузки');\n        const json = await response.json();\n        \n        if (!cancelled) {\n          setData(json);\n          setLoading(false);\n        }\n      } catch (err) {\n        if (!cancelled) {\n          setError(err.message);\n          setLoading(false);\n        }\n      }\n    };\n    \n    fetchData();\n    return () => { cancelled = true; };\n  }, [url]);\n  \n  return { data, loading, error };\n}\n\n// Использование:\nfunction UserProfile({ userId }) {\n  const { data, loading, error } = useFetch(`/api/users/${userId}`);\n  \n  if (loading) return &lt;div&gt;Загрузка...&lt;/div&gt;\n  if (error) return &lt;div&gt;Ошибка: {error}&lt;/div&gt;\n  return &lt;div&gt;{data.name}&lt;/div&gt;\n}</code>"
+    },
+    {
+      "id": 55,
+      "text": "Что такое useToggle и как его реализовать?",
+      "hasOptions": false,
+      "answer": "🔄 <b>Кастомный хук useToggle</b>\n\n<code>function useToggle(initialValue = false) {\n  const [value, setValue] = useState(initialValue);\n  \n  const toggle = useCallback(() => {\n    setValue(v => !v);\n  }, []);\n  \n  return [value, toggle];\n}\n\n// Использование:\nfunction Modal() {\n  const [isOpen, toggleOpen] = useToggle(false);\n  \n  return (\n    &lt;div&gt;\n      &lt;button onClick={toggleOpen}&gt;Открыть модалку&lt;/button&gt;\n      \n      {isOpen && (\n        &lt;div className=\"modal\"&gt;\n          &lt;h2&gt;Модальное окно&lt;/h2&gt;\n          &lt;button onClick={toggleOpen}&gt;Закрыть&lt;/button&gt;\n        &lt;/div&gt;\n      )}\n    &lt;/div&gt;\n  );\n}\n\n// Расширенная версия:\nfunction useToggle(initialValue = false) {\n  const [value, setValue] = useState(initialValue);\n  \n  const toggle = useCallback(() => setValue(v => !v), []);\n  const setTrue = useCallback(() => setValue(true), []);\n  const setFalse = useCallback(() => setValue(false), []);\n  \n  return [value, { toggle, setTrue, setFalse }];\n}</code>"
+    },
+    {
+      "id": 56,
+      "text": "Как реализовать useDebounce для поиска?",
+      "hasOptions": false,
+      "answer": "⏱️ <b>Кастомный хук useDebounce</b>\n\n<code>function useDebounce(value, delay) {\n  const [debouncedValue, setDebouncedValue] = useState(value);\n  \n  useEffect(() => {\n    const timer = setTimeout(() => {\n      setDebouncedValue(value);\n    }, delay);\n    \n    return () => clearTimeout(timer); // Очистка таймера\n  }, [value, delay]);\n  \n  return debouncedValue;\n}\n\n// Использование в поиске:\nfunction SearchComponent() {\n  const [searchTerm, setSearchTerm] = useState('');\n  const debouncedSearch = useDebounce(searchTerm, 500); // 500мс задержка\n  const [results, setResults] = useState([]);\n  \n  useEffect(() => {\n    if (debouncedSearch) {\n      // API запрос только после 500мс бездействия\n      fetch(`/api/search?q=${debouncedSearch}`)\n        .then(res => res.json())\n        .then(setResults);\n    }\n  }, [debouncedSearch]);\n  \n  return (\n    &lt;div&gt;\n      &lt;input\n        value={searchTerm}\n        onChange={e => setSearchTerm(e.target.value)}\n        placeholder=\"Поиск...\"\n      /&gt;\n      &lt;ul&gt;{results.map(r => &lt;li key={r.id}&gt;{r.name}&lt;/li&gt;)}&lt;/ul&gt;\n    &lt;/div&gt;\n  );\n}</code>"
+    },
+    {
+      "id": 57,
+      "text": "Приведите пример usePrevious для хранения предыдущего значения.",
+      "hasOptions": false,
+      "answer": "⏮️ <b>Кастомный хук usePrevious</b>\n\n<code>function usePrevious(value) {\n  const ref = useRef();\n  \n  useEffect(() => {\n    ref.current = value; // Сохраняем текущее значение\n  }, [value]);\n  \n  return ref.current; // Возвращаем предыдущее\n}\n\n// Использование:\nfunction Counter() {\n  const [count, setCount] = useState(0);\n  const prevCount = usePrevious(count);\n  \n  return (\n    &lt;div&gt;\n      &lt;p&gt;Текущее: {count}&lt;/p&gt;\n      &lt;p&gt;Предыдущее: {prevCount}&lt;/p&gt;\n      &lt;button onClick={() => setCount(count + 1)}&gt;+1&lt;/button&gt;\n    &lt;/div&gt;\n  );\n}\n\n// Пример — отслеживание изменений:\nfunction UserProfile({ userId }) {\n  const prevUserId = usePrevious(userId);\n  \n  useEffect(() => {\n    if (prevUserId && prevUserId !== userId) {\n      console.log(`Переход от пользователя ${prevUserId} к ${userId}`);\n    }\n  }, [userId, prevUserId]);\n  \n  return &lt;div&gt;User ID: {userId}&lt;/div&gt;\n}</code>"
+    },
+    {
+      "id": 58,
+      "text": "Как создать useClickOutside для закрытия модалки?",
+      "hasOptions": false,
+      "answer": "🖱️ <b>Кастомный хук useClickOutside</b>\n\n<code>function useClickOutside(ref, callback) {\n  useEffect(() => {\n    const handleClick = (event) => {\n      if (ref.current && !ref.current.contains(event.target)) {\n        callback(); // Клик вне элемента\n      }\n    };\n    \n    document.addEventListener('mousedown', handleClick);\n    return () => document.removeEventListener('mousedown', handleClick);\n  }, [ref, callback]);\n}\n\n// Использование:\nfunction Modal({ isOpen, onClose }) {\n  const modalRef = useRef();\n  useClickOutside(modalRef, onClose);\n  \n  if (!isOpen) return null;\n  \n  return (\n    &lt;div className=\"overlay\"&gt;\n      &lt;div ref={modalRef} className=\"modal\"&gt;\n        &lt;h2&gt;Модальное окно&lt;/h2&gt;\n        &lt;p&gt;Кликните вне окна, чтобы закрыть&lt;/p&gt;\n        &lt;button onClick={onClose}&gt;Закрыть&lt;/button&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  );\n}\n\nfunction App() {\n  const [isOpen, setIsOpen] = useState(false);\n  \n  return (\n    &lt;div&gt;\n      &lt;button onClick={() => setIsOpen(true)}&gt;Открыть&lt;/button&gt;\n      &lt;Modal isOpen={isOpen} onClose={() => setIsOpen(false)} /&gt;\n    &lt;/div&gt;\n  );\n}</code>"
+    },
+    {
+      "id": 59,
+      "text": "Какие правила использования хуков в React?",
+      "hasOptions": false,
+      "answer": "📋 <b>Правила хуков (Rules of Hooks)</b>\n\n<b>1️⃣ Вызывайте хуки только на верхнем уровне</b>\n<code>// ❌ Плохо\nfunction Component() {\n  if (condition) {\n    const [state, setState] = useState(0); // Ошибка!\n  }\n}\n\n// ✅ Хорошо\nfunction Component() {\n  const [state, setState] = useState(0);\n  if (condition) {\n    // Используйте state здесь\n  }\n}</code>\n\n<b>2️⃣ Вызывайте хуки только в функциональных компонентах или кастомных хуках</b>\n<code>// ❌ Плохо\nfunction regularFunction() {\n  const [state, setState] = useState(0); // Ошибка!\n}\n\n// ✅ Хорошо\nfunction useCustomHook() {\n  const [state, setState] = useState(0); // OK\n  return state;\n}</code>\n\n<b>3️⃣ Не вызывайте в циклах, условиях или вложенных функциях</b>\n<code>// ❌ Плохо\nitems.forEach(() => {\n  const [state] = useState(0); // Ошибка!\n});</code>\n\n💡 <b>Почему:</b> React полагается на порядок вызова хуков для сохранения состояния между рендерами"
+    },
+    {
+      "id": 60,
+      "text": "Что такое Batching в React и как оно изменилось в React 18?",
+      "hasOptions": false,
+      "answer": "📦 <b>Batching — группировка обновлений состояния</b>\n\n<b>React 17 и ранее:</b>\n<code>function handleClick() {\n  setCount(c => c + 1);\n  setFlag(f => !f);\n  // ✅ 1 рендер (батчинг работает в обработчиках событий)\n}\n\nfetch('/api').then(() => {\n  setCount(c => c + 1);\n  setFlag(f => !f);\n  // ❌ 2 рендера (батчинг НЕ работает в промисах)\n});</code>\n\n<b>React 18 — Automatic Batching:</b>\n<code>function handleClick() {\n  setCount(c => c + 1);\n  setFlag(f => !f);\n  // ✅ 1 рендер\n}\n\nfetch('/api').then(() => {\n  setCount(c => c + 1);\n  setFlag(f => !f);\n  // ✅ 1 рендер (теперь работает везде!)\n});\n\nsetTimeout(() => {\n  setCount(c => c + 1);\n  setFlag(f => !f);\n  // ✅ 1 рендер\n}, 1000);</code>\n\n<b>Отключить батчинг (редко нужно):</b>\n<code>import { flushSync } from 'react-dom';\n\nflushSync(() => {\n  setCount(c => c + 1); // Рендер сразу\n});\nflushSync(() => {\n  setFlag(f => !f); // Ещё один рендер\n});</code>\n\n🎯 <b>Преимущество:</b> Меньше рендеров = лучше производительность!"
+    },
+    {
+      "id": 61,
+      "text": "Что такое manifest.json в React-приложении и какие поля в нем важны?",
+      "hasOptions": false,
+      "answer": "📱 <b>manifest.json — метаданные для PWA</b>\n\n<b>Пример manifest.json:</b>\n<code>{\n  \"short_name\": \"MyApp\",\n  \"name\": \"My React Application\",\n  \"description\": \"Описание приложения\",\n  \"icons\": [\n    {\n      \"src\": \"favicon.ico\",\n      \"sizes\": \"64x64 32x32 24x24 16x16\",\n      \"type\": \"image/x-icon\"\n    },\n    {\n      \"src\": \"logo192.png\",\n      \"type\": \"image/png\",\n      \"sizes\": \"192x192\"\n    },\n    {\n      \"src\": \"logo512.png\",\n      \"type\": \"image/png\",\n      \"sizes\": \"512x512\"\n    }\n  ],\n  \"start_url\": \".\",\n  \"display\": \"standalone\",\n  \"theme_color\": \"#000000\",\n  \"background_color\": \"#ffffff\"\n}</code>\n\n📋 <b>Важные поля:</b>\n• <b>name</b> — полное название приложения\n• <b>short_name</b> — короткое название (для иконки)\n• <b>icons</b> — иконки разных размеров\n• <b>start_url</b> — стартовая страница\n• <b>display</b> — режим отображения (standalone, fullscreen, minimal-ui)\n• <b>theme_color</b> — цвет темы браузера\n• <b>background_color</b> — цвет фона при загрузке\n\n🎯 <b>Зачем нужен:</b> Позволяет установить веб-приложение как нативное на устройство (PWA)"
+    },
+    {
+      "id": 62,
+      "text": "Приведите пример использования Fragment в таблицах или списках.",
+      "hasOptions": false,
+      "answer": "📋 <b>Fragment в таблицах</b>\n\n<b>Пример с таблицей:</b>\n<code>function TableRows({ data }) {\n  return (\n    &lt;&gt;\n      {data.map(item => (\n        &lt;React.Fragment key={item.id}&gt;\n          &lt;tr&gt;\n            &lt;td&gt;{item.name}&lt;/td&gt;\n            &lt;td&gt;{item.age}&lt;/td&gt;\n          &lt;/tr&gt;\n          {item.details && (\n            &lt;tr&gt;\n              &lt;td colSpan=\"2\"&gt;{item.details}&lt;/td&gt;\n            &lt;/tr&gt;\n          )}\n        &lt;/React.Fragment&gt;\n      ))}\n    &lt;/&gt;\n  );\n}\n\nfunction Table({ data }) {\n  return (\n    &lt;table&gt;\n      &lt;thead&gt;\n        &lt;tr&gt;\n          &lt;th&gt;Имя&lt;/th&gt;\n          &lt;th&gt;Возраст&lt;/th&gt;\n        &lt;/tr&gt;\n      &lt;/thead&gt;\n      &lt;tbody&gt;\n        &lt;TableRows data={data} /&gt;\n      &lt;/tbody&gt;\n    &lt;/table&gt;\n  );\n}</code>\n\n<b>Пример со списком:</b>\n<code>function DescriptionList({ items }) {\n  return (\n    &lt;dl&gt;\n      {items.map(item => (\n        &lt;React.Fragment key={item.id}&gt;\n          &lt;dt&gt;{item.term}&lt;/dt&gt;\n          &lt;dd&gt;{item.definition}&lt;/dd&gt;\n        &lt;/React.Fragment&gt;\n      ))}\n    &lt;/dl&gt;\n  );\n}</code>\n\n💡 <b>Важно:</b> При использовании в map нужен key, поэтому используем &lt;React.Fragment key={...}&gt;, а не короткий синтаксис &lt;&gt;"
+    },
+    {
+      "id": 63,
+      "text": "Что такое Web App Manifest и зачем он в PWA на React?",
+      "hasOptions": false,
+      "answer": "🌐 <b>Web App Manifest — конфигурация PWA</b>\n\n<b>Что это:</b>\nJSON-файл, который описывает, как веб-приложение должно вести себя при установке на устройство пользователя.\n\n<b>Основные возможности:</b>\n1. Установка на домашний экран\n2. Запуск в полноэкранном режиме\n3. Кастомная иконка и название\n4. Цветовая схема\n5. Ориентация экрана\n\n<b>Расширенный пример:</b>\n<code>{\n  \"name\": \"Todo App\",\n  \"short_name\": \"Todo\",\n  \"description\": \"Менеджер задач\",\n  \"start_url\": \"/\",\n  \"scope\": \"/\",\n  \"display\": \"standalone\",\n  \"orientation\": \"portrait\",\n  \"theme_color\": \"#2196F3\",\n  \"background_color\": \"#ffffff\",\n  \"icons\": [\n    {\n      \"src\": \"/icon-192.png\",\n      \"sizes\": \"192x192\",\n      \"type\": \"image/png\",\n      \"purpose\": \"any maskable\"\n    },\n    {\n      \"src\": \"/icon-512.png\",\n      \"sizes\": \"512x512\",\n      \"type\": \"image/png\"\n    }\n  ]\n}</code>\n\n<b>Подключение в index.html:</b>\n<code>&lt;link rel=\"manifest\" href=\"/manifest.json\" /&gt;</code>\n\n🎯 <b>Результат:</b> Приложение ведёт себя как нативное!"
+    },
+    {
+      "id": 64,
+      "text": "Когда Fragment нужен с key в массивах?",
+      "hasOptions": false,
+      "answer": "🔑 <b>Fragment с key в списках</b>\n\n<b>Когда нужен key:</b>\nКогда вы рендерите массив элементов и каждый элемент содержит несколько соседних узлов.\n\n<b>❌ Не работает (короткий синтаксис):</b>\n<code>function Glossary({ items }) {\n  return (\n    &lt;dl&gt;\n      {items.map(item => (\n        // ⚠️ Ошибка! Короткий синтаксис не поддерживает key\n        &lt;&gt;\n          &lt;dt&gt;{item.term}&lt;/dt&gt;\n          &lt;dd&gt;{item.description}&lt;/dd&gt;\n        &lt;/&gt;\n      ))}\n    &lt;/dl&gt;\n  );\n}</code>\n\n<b>✅ Правильно (полный синтаксис):</b>\n<code>function Glossary({ items }) {\n  return (\n    &lt;dl&gt;\n      {items.map(item => (\n        &lt;React.Fragment key={item.id}&gt;\n          &lt;dt&gt;{item.term}&lt;/dt&gt;\n          &lt;dd&gt;{item.description}&lt;/dd&gt;\n        &lt;/React.Fragment&gt;\n      ))}\n    &lt;/dl&gt;\n  );\n}</code>\n\n<b>Ещё пример — таблица с группировкой:</b>\n<code>function GroupedTable({ groups }) {\n  return (\n    &lt;table&gt;\n      &lt;tbody&gt;\n        {groups.map(group => (\n          &lt;React.Fragment key={group.id}&gt;\n            &lt;tr className=\"group-header\"&gt;\n              &lt;td colSpan=\"2\"&gt;{group.name}&lt;/td&gt;\n            &lt;/tr&gt;\n            {group.items.map(item => (\n              &lt;tr key={item.id}&gt;\n                &lt;td&gt;{item.name}&lt;/td&gt;\n                &lt;td&gt;{item.value}&lt;/td&gt;\n              &lt;/tr&gt;\n            ))}\n          &lt;/React.Fragment&gt;\n        ))}\n      &lt;/tbody&gt;\n    &lt;/table&gt;\n  );\n}</code>"
+    },
+    {
+      "id": 65,
+      "text": "Что нового в хуках React 19, такие как useActionState?",
+      "hasOptions": false,
+      "answer": "🆕 <b>React 19 — новые хуки для форм и действий</b>\n\n<b>useActionState — управление состоянием действий:</b>\n<code>import { useActionState } from 'react';\n\nfunction Form() {\n  const [state, formAction, isPending] = useActionState(\n    async (prevState, formData) => {\n      const name = formData.get('name');\n      \n      try {\n        await saveUser(name);\n        return { success: true, message: 'Сохранено!' };\n      } catch (error) {\n        return { success: false, error: error.message };\n      }\n    },\n    { success: false } // Начальное состояние\n  );\n  \n  return (\n    &lt;form action={formAction}&gt;\n      &lt;input name=\"name\" /&gt;\n      &lt;button disabled={isPending}&gt;\n        {isPending ? 'Сохранение...' : 'Сохранить'}\n      &lt;/button&gt;\n      {state.success && &lt;p&gt;✅ {state.message}&lt;/p&gt;}\n      {state.error && &lt;p&gt;❌ {state.error}&lt;/p&gt;}\n    &lt;/form&gt;\n  );\n}</code>\n\n🎯 <b>Преимущества:</b>\n• Встроенная обработка pending состояния\n• Автоматическая обработка ошибок\n• Работает без JavaScript (прогрессивное улучшение)\n• Упрощает работу с формами\n\n💡 <b>Заменяет:</b> Комбинацию useState + useTransition для форм"
+    },
+    {
+      "id": 66,
+      "text": "Приведите пример useFormStatus для форм.",
+      "hasOptions": false,
+      "answer": "📝 <b>useFormStatus — статус отправки формы</b>\n\n<code>import { useFormStatus } from 'react-dom';\n\nfunction SubmitButton() {\n  const { pending, data, method, action } = useFormStatus();\n  \n  return (\n    &lt;button type=\"submit\" disabled={pending}&gt;\n      {pending ? 'Отправка...' : 'Отправить'}\n    &lt;/button&gt;\n  );\n}\n\nfunction Form() {\n  async function handleSubmit(formData) {\n    const name = formData.get('name');\n    await fetch('/api/users', {\n      method: 'POST',\n      body: JSON.stringify({ name })\n    });\n  }\n  \n  return (\n    &lt;form action={handleSubmit}&gt;\n      &lt;input name=\"name\" placeholder=\"Имя\" /&gt;\n      &lt;SubmitButton /&gt; {/* Автоматически знает о pending */}\n    &lt;/form&gt;\n  );\n}</code>\n\n<b>С индикатором загрузки:</b>\n<code>function FormFields() {\n  const { pending } = useFormStatus();\n  \n  return (\n    &lt;&gt;\n      &lt;input name=\"email\" disabled={pending} /&gt;\n      &lt;input name=\"password\" disabled={pending} /&gt;\n      {pending && &lt;Spinner /&gt;}\n    &lt;/&gt;\n  );\n}</code>\n\n💡 <b>Важно:</b> useFormStatus работает только внутри компонентов, которые являются потомками &lt;form&gt;"
+    },
+    {
+      "id": 67,
+      "text": "Как работает useOptimistic для оптимистичных обновлений?",
+      "hasOptions": false,
+      "answer": "⚡ <b>useOptimistic — мгновенный UI</b>\n\n<b>Пример — лайки:</b>\n<code>import { useOptimistic } from 'react';\n\nfunction Post({ post }) {\n  const [optimisticLikes, addOptimisticLike] = useOptimistic(\n    post.likes,\n    (currentLikes, newLike) => currentLikes + 1\n  );\n  \n  async function handleLike() {\n    // Мгновенно обновляем UI\n    addOptimisticLike(1);\n    \n    // Отправляем запрос\n    try {\n      await fetch(`/api/posts/${post.id}/like`, { method: 'POST' });\n    } catch (error) {\n      // При ошибке откатится автоматически\n      console.error('Ошибка лайка');\n    }\n  }\n  \n  return (\n    &lt;div&gt;\n      &lt;p&gt;{post.title}&lt;/p&gt;\n      &lt;button onClick={handleLike}&gt;\n        ❤️ {optimisticLikes}\n      &lt;/button&gt;\n    &lt;/div&gt;\n  );\n}</code>\n\n<b>Пример — добавление в список:</b>\n<code>function TodoList({ todos }) {\n  const [optimisticTodos, addOptimisticTodo] = useOptimistic(\n    todos,\n    (state, newTodo) => [...state, { ...newTodo, pending: true }]\n  );\n  \n  async function addTodo(text) {\n    const tempTodo = { id: Date.now(), text };\n    addOptimisticTodo(tempTodo);\n    \n    await fetch('/api/todos', {\n      method: 'POST',\n      body: JSON.stringify({ text })\n    });\n  }\n  \n  return optimisticTodos.map(todo => (\n    &lt;div key={todo.id} style={{ opacity: todo.pending ? 0.5 : 1 }}&gt;\n      {todo.text}\n    &lt;/div&gt;\n  ));\n}</code>"
+    },
+    {
+      "id": 68,
+      "text": "Что такое use в React 19 и как его использовать с промисами?",
+      "hasOptions": false,
+      "answer": "🔮 <b>use — новый хук для промисов и контекста</b>\n\n<b>Использование с промисами:</b>\n<code>import { use, Suspense } from 'react';\n\nfunction UserProfile({ userPromise }) {\n  // ✅ Можно использовать в условиях!\n  const user = use(userPromise);\n  \n  return &lt;div&gt;{user.name}&lt;/div&gt;\n}\n\nfunction App() {\n  const userPromise = fetch('/api/user').then(r => r.json());\n  \n  return (\n    &lt;Suspense fallback={&lt;div&gt;Загрузка...&lt;/div&gt;}&gt;\n      &lt;UserProfile userPromise={userPromise} /&gt;\n    &lt;/Suspense&gt;\n  );\n}</code>\n\n<b>Использование с контекстом (в условиях!):</b>\n<code>function Component({ isLoggedIn }) {\n  // ✅ use можно вызывать в условиях (в отличие от useContext)\n  if (isLoggedIn) {\n    const theme = use(ThemeContext);\n    return &lt;div className={theme}&gt;Контент&lt;/div&gt;\n  }\n  return &lt;div&gt;Войдите&lt;/div&gt;\n}</code>\n\n<b>Пример с кешированием:</b>\n<code>const cache = new Map();\n\nfunction fetchUser(id) {\n  if (!cache.has(id)) {\n    cache.set(id, fetch(`/api/users/${id}`).then(r => r.json()));\n  }\n  return cache.get(id);\n}\n\nfunction User({ id }) {\n  const user = use(fetchUser(id));\n  return &lt;div&gt;{user.name}&lt;/div&gt;\n}</code>\n\n🎯 <b>Отличия от других хуков:</b>\n• Можно вызывать в условиях и циклах\n• Работает с промисами\n• Требует Suspense"
+    },
+    {
+      "id": 69,
+      "text": "Что такое React Compiler в React 19 и как он упрощает memo?",
+      "hasOptions": false,
+      "answer": "🚀 <b>React Compiler — автоматическая оптимизация</b>\n\n<b>Проблема раньше:</b>\n<code>// Нужно было вручную оптимизировать\nconst ExpensiveComponent = React.memo(({ data }) => {\n  const computed = useMemo(() => heavyComputation(data), [data]);\n  const handleClick = useCallback(() => doSomething(), []);\n  \n  return &lt;div onClick={handleClick}&gt;{computed}&lt;/div&gt;\n});</code>\n\n<b>✅ С React Compiler:</b>\n<code>// Компилятор автоматически оптимизирует!\nfunction ExpensiveComponent({ data }) {\n  const computed = heavyComputation(data); // Автоматически мемоизируется\n  const handleClick = () => doSomething(); // Автоматически мемоизируется\n  \n  return &lt;div onClick={handleClick}&gt;{computed}&lt;/div&gt;\n}\n// Не нужны: React.memo, useMemo, useCallback!</code>\n\n🎯 <b>Что делает компилятор:</b>\n1. Автоматически мемоизирует компоненты (как React.memo)\n2. Автоматически мемоизирует вычисления (как useMemo)\n3. Автоматически мемоизирует функции (как useCallback)\n4. Оптимизирует только когда нужно\n\n💡 <b>Преимущества:</b>\n• Меньше кода\n• Нет ручной оптимизации\n• Умнее, чем ручная мемоизация\n• Автоматически адаптируется\n\n⚠️ <b>Важно:</b> Компоненты должны быть чистыми функциями!"
+    },
+    {
+      "id": 70,
+      "text": "Пример оптимистичного обновления в чате с useOptimistic.",
+      "hasOptions": false,
+      "answer": "💬 <b>Оптимистичный чат с useOptimistic</b>\n\n<code>function ChatRoom({ roomId }) {\n  const [messages, setMessages] = useState([]);\n  const [optimisticMessages, addOptimisticMessage] = useOptimistic(\n    messages,\n    (state, newMessage) => [...state, { ...newMessage, sending: true }]\n  );\n  \n  async function sendMessage(text) {\n    const tempMessage = {\n      id: `temp-${Date.now()}`,\n      text,\n      author: 'Вы',\n      timestamp: new Date()\n    };\n    \n    // Мгновенно показываем сообщение\n    addOptimisticMessage(tempMessage);\n    \n    try {\n      // Отправляем на сервер\n      const response = await fetch(`/api/rooms/${roomId}/messages`, {\n        method: 'POST',\n        body: JSON.stringify({ text })\n      });\n      const savedMessage = await response.json();\n      \n      // Заменяем временное сообщение на реальное\n      setMessages(prev => [...prev, savedMessage]);\n    } catch (error) {\n      // При ошибке оптимистичное обновление откатится автоматически\n      alert('Не удалось отправить сообщение');\n    }\n  }\n  \n  return (\n    &lt;div&gt;\n      &lt;MessageList messages={optimisticMessages} /&gt;\n      &lt;MessageInput onSend={sendMessage} /&gt;\n    &lt;/div&gt;\n  );\n}\n\nfunction MessageList({ messages }) {\n  return messages.map(msg => (\n    &lt;div key={msg.id} style={{ opacity: msg.sending ? 0.5 : 1 }}&gt;\n      &lt;strong&gt;{msg.author}:&lt;/strong&gt; {msg.text}\n      {msg.sending && &lt;span&gt; ⏳&lt;/span&gt;}\n    &lt;/div&gt;\n  ));\n}</code>"
+    },
+    {
+      "id": 71,
+      "text": "Что такое Error Boundary в React и как его создать?",
+      "hasOptions": false,
+      "answer": "🛡️ <b>Error Boundary — перехват ошибок рендеринга</b>\n\n<b>Создание Error Boundary:</b>\n<code>class ErrorBoundary extends React.Component {\n  constructor(props) {\n    super(props);\n    this.state = { hasError: false, error: null };\n  }\n  \n  static getDerivedStateFromError(error) {\n    // Обновляем state при ошибке\n    return { hasError: true, error };\n  }\n  \n  componentDidCatch(error, errorInfo) {\n    // Логируем ошибку\n    console.error('Error caught:', error, errorInfo);\n    // Можно отправить на сервер логирования\n    logErrorToService(error, errorInfo);\n  }\n  \n  render() {\n    if (this.state.hasError) {\n      return (\n        &lt;div&gt;\n          &lt;h1&gt;Что-то пошло не так 😢&lt;/h1&gt;\n          &lt;details&gt;\n            {this.state.error && this.state.error.toString()}\n          &lt;/details&gt;\n        &lt;/div&gt;\n      );\n    }\n    \n    return this.props.children;\n  }\n}</code>\n\n<b>Использование:</b>\n<code>function App() {\n  return (\n    &lt;ErrorBoundary&gt;\n      &lt;Header /&gt;\n      &lt;ErrorBoundary&gt;\n        &lt;MainContent /&gt;\n      &lt;/ErrorBoundary&gt;\n      &lt;Footer /&gt;\n    &lt;/ErrorBoundary&gt;\n  );\n}</code>\n\n⚠️ <b>Не ловит:</b>\n• Ошибки в обработчиках событий\n• Асинхронный код\n• SSR ошибки\n• Ошибки в самом Error Boundary"
+    },
+    {
+      "id": 72,
+      "text": "Приведите пример использования Error Boundary с запасным UI.",
+      "hasOptions": false,
+      "answer": "🎨 <b>Error Boundary с красивым запасным UI</b>\n\n<code>class ErrorBoundary extends React.Component {\n  state = { hasError: false, error: null, errorInfo: null };\n  \n  static getDerivedStateFromError(error) {\n    return { hasError: true };\n  }\n  \n  componentDidCatch(error, errorInfo) {\n    this.setState({ error, errorInfo });\n  }\n  \n  resetError = () => {\n    this.setState({ hasError: false, error: null, errorInfo: null });\n  };\n  \n  render() {\n    if (this.state.hasError) {\n      return (\n        &lt;div style={{ padding: '20px', textAlign: 'center' }}&gt;\n          &lt;h1&gt;😵 Упс! Что-то сломалось&lt;/h1&gt;\n          &lt;p&gt;Мы уже работаем над исправлением&lt;/p&gt;\n          &lt;button onClick={this.resetError}&gt;\n            🔄 Попробовать снова\n          &lt;/button&gt;\n          \n          {process.env.NODE_ENV === 'development' && (\n            &lt;details style={{ marginTop: '20px', textAlign: 'left' }}&gt;\n              &lt;summary&gt;Детали ошибки&lt;/summary&gt;\n              &lt;pre&gt;{this.state.error && this.state.error.toString()}&lt;/pre&gt;\n              &lt;pre&gt;{this.state.errorInfo && this.state.errorInfo.componentStack}&lt;/pre&gt;\n            &lt;/details&gt;\n          )}\n        &lt;/div&gt;\n      );\n    }\n    \n    return this.props.children;\n  }\n}</code>\n\n<b>Использование с разными UI:</b>\n<code>&lt;ErrorBoundary fallback={&lt;ErrorPage /&gt;}&gt;\n  &lt;App /&gt;\n&lt;/ErrorBoundary&gt;</code>"
+    },
+    {
+      "id": 73,
+      "text": "Как добавить восстановление в Error Boundary с кнопкой \"Попробовать снова\"?",
+      "hasOptions": false,
+      "answer": "🔄 <b>Error Boundary с восстановлением</b>\n\n<code>class ErrorBoundary extends React.Component {\n  state = { hasError: false, errorCount: 0 };\n  \n  static getDerivedStateFromError(error) {\n    return { hasError: true };\n  }\n  \n  componentDidCatch(error, errorInfo) {\n    this.setState(prev => ({ errorCount: prev.errorCount + 1 }));\n    console.error('Error #' + this.state.errorCount, error);\n  }\n  \n  // Сброс ошибки при изменении children\n  componentDidUpdate(prevProps) {\n    if (this.state.hasError && prevProps.children !== this.props.children) {\n      this.setState({ hasError: false });\n    }\n  }\n  \n  handleReset = () => {\n    this.setState({ hasError: false });\n  };\n  \n  render() {\n    if (this.state.hasError) {\n      return (\n        &lt;div className=\"error-container\"&gt;\n          &lt;h1&gt;Произошла ошибка&lt;/h1&gt;\n          &lt;p&gt;Попыток восстановления: {this.state.errorCount}&lt;/p&gt;\n          &lt;button onClick={this.handleReset}&gt;\n            🔄 Попробовать снова\n          &lt;/button&gt;\n          &lt;button onClick={() => window.location.reload()}&gt;\n            🏠 Перезагрузить страницу\n          &lt;/button&gt;\n        &lt;/div&gt;\n      );\n    }\n    \n    return this.props.children;\n  }\n}</code>\n\n<b>С автоматическим восстановлением:</b>\n<code>componentDidCatch(error, errorInfo) {\n  // Автоматически пробуем восстановить через 3 секунды\n  setTimeout(() => {\n    if (this.state.errorCount < 3) {\n      this.setState({ hasError: false });\n    }\n  }, 3000);\n}</code>"
+    },
+    {
+      "id": 74,
+      "text": "Как оптимизировать компонент с хуками для производительности?",
+      "hasOptions": false,
+      "answer": "⚡ <b>Оптимизация компонентов с хуками</b>\n\n<b>1. React.memo для пропсов:</b>\n<code>const ExpensiveChild = React.memo(({ data, onClick }) => {\n  return &lt;div onClick={onClick}&gt;{data}&lt;/div&gt;\n});</code>\n\n<b>2. useCallback для функций:</b>\n<code>function Parent() {\n  const handleClick = useCallback(() => {\n    console.log('Click');\n  }, []); // Функция создаётся один раз\n  \n  return &lt;ExpensiveChild onClick={handleClick} /&gt;\n}</code>\n\n<b>3. useMemo для вычислений:</b>\n<code>function Component({ items }) {\n  const sortedItems = useMemo(() => {\n    return [...items].sort((a, b) => a.name.localeCompare(b.name));\n  }, [items]);\n  \n  return sortedItems.map(...);\n}</code>\n\n<b>4. Разделение состояния:</b>\n<code>// ❌ Плохо — всё в одном state\nconst [state, setState] = useState({ name: '', age: 0, email: '' });\n\n// ✅ Хорошо — раздельные state\nconst [name, setName] = useState('');\nconst [age, setAge] = useState(0);\nconst [email, setEmail] = useState('');</code>\n\n<b>5. Ленивая инициализация:</b>\n<code>// ❌ Плохо — вычисляется при каждом рендере\nconst [state, setState] = useState(expensiveComputation());\n\n// ✅ Хорошо — вычисляется один раз\nconst [state, setState] = useState(() => expensiveComputation());</code>\n\n💡 <b>Правило:</b> Оптимизируйте только после измерения производительности!"
+    },
+    {
+      "id": 75,
+      "text": "Как найти лишние ререндеры с хуками?",
+      "hasOptions": false,
+      "answer": "🔍 <b>Поиск лишних рендеров</b>\n\n<b>1. React DevTools Profiler:</b>\n<code>// В браузере:\n// DevTools → Profiler → Record → Выполните действие → Stop\n// Смотрите, какие компоненты рендерятся и почему</code>\n\n<b>2. Кастомный хук для отладки:</b>\n<code>function useWhyDidYouUpdate(name, props) {\n  const previousProps = useRef();\n  \n  useEffect(() => {\n    if (previousProps.current) {\n      const allKeys = Object.keys({ ...previousProps.current, ...props });\n      const changedProps = {};\n      \n      allKeys.forEach(key => {\n        if (previousProps.current[key] !== props[key]) {\n          changedProps[key] = {\n            from: previousProps.current[key],\n            to: props[key]\n          };\n        }\n      });\n      \n      if (Object.keys(changedProps).length > 0) {\n        console.log('[why-did-you-update]', name, changedProps);\n      }\n    }\n    \n    previousProps.current = props;\n  });\n}\n\n// Использование:\nfunction MyComponent(props) {\n  useWhyDidYouUpdate('MyComponent', props);\n  return &lt;div&gt;...&lt;/div&gt;\n}</code>\n\n<b>3. Логирование рендеров:</b>\n<code>function Component({ data }) {\n  console.log('Component render', { data });\n  \n  useEffect(() => {\n    console.log('Component mounted');\n    return () => console.log('Component unmounted');\n  }, []);\n  \n  return &lt;div&gt;{data}&lt;/div&gt;\n}</code>"
+    },
+    {
+      "id": 76,
+      "text": "На что обратить внимание при миграции на React 19?",
+      "hasOptions": false,
+      "answer": "🚀 <b>Миграция на React 19</b>\n\n<b>✅ Новые возможности:</b>\n1. React Compiler — автоматическая оптимизация\n2. Actions — упрощённая работа с формами\n3. use() — новый хук для промисов\n4. useOptimistic — оптимистичные обновления\n5. Automatic Batching везде\n\n<b>⚠️ Breaking Changes:</b>\n<code>// 1. ref как обычный проп (не нужен forwardRef)\n// Раньше:\nconst Input = forwardRef((props, ref) => {\n  return &lt;input ref={ref} {...props} /&gt;\n});\n\n// Теперь:\nfunction Input({ ref, ...props }) {\n  return &lt;input ref={ref} {...props} /&gt;\n}\n\n// 2. Context.Provider → Context\n// Раньше:\n&lt;ThemeContext.Provider value={theme}&gt;\n\n// Теперь:\n&lt;ThemeContext value={theme}&gt;</code>\n\n<b>📋 Чеклист миграции:</b>\n1. Обновите зависимости: react@19, react-dom@19\n2. Проверьте использование forwardRef\n3. Обновите Context.Provider\n4. Протестируйте формы с новыми Actions\n5. Включите React Compiler (опционально)\n6. Удалите лишние useMemo/useCallback (с компилятором)\n\n💡 <b>Совет:</b> Миграция постепенная, старый код продолжит работать!"
+    },
+    {
+      "id": 77,
       "text": "Что такое React JS?",
       "hasOptions": false,
       "answer": "React JS, или просто React, это открытая библиотека JavaScript для создания пользовательских интерфейсов, особенно для одностраничных приложений (SPA). Ключевые особенности React:\n1) Компонентный подход: React строится на концепции компонентов, что позволяет разработчикам создавать легко переиспользуемые куски кода;\n2) Виртуальный DOM: React использует виртуальный DOM для отслеживания изменений. Это абстракция реального DOM, что позволяет библиотеке обновлять только те части интерфейса, которые действительно изменились, вместо полного перерендеринга страницы. Это делает React относительно быстрым;\n3) Хуки: Введение хуков позволило использовать состояния и другие возможности классовых компонентов в функциональных компонентах, что сделало код более кратким и чистым;\n4) Сообщество и экосистема: React имеет большое и активное сообщество разработчиков, а также много библиотек и инструментов, созданных сообществом, что облегчает разработку сложных приложений.\n\nПодробнее: <a href='https://youtu.be/R_39q-vdOaE?si=mEKDaYDjEdnojG-N' target='_blank'>Введение в React (видео)</a>"
     },
     {
-      "id": 2,
+      "id": 78,
       "text": "Для чего нужен атрибут key при рендере списков?",
       "hasOptions": false,
       "answer": "Ключи (keys) помогают React определять, какие элементы были изменены, добавлены или удалены. Их необходимо указывать, чтобы React мог сопоставлять элементы массива с течением времени. Лучший способ выбрать ключ — это использовать строку, которая будет явно отличать элемент списка от его соседей. Лучше всего вы будете использовать ID из ваших данных как ключи. Индексы массива тоже можно использовать для этого, но только если элементы массива не добавляются в начало, не переставляются и не удаляются."
     },
     {
-      "id": 3,
+      "id": 79,
       "text": "Как работает проп children?",
       "hasOptions": false,
       "answer": "Некоторые компоненты не знают своих потомков заранее. Это особенно характерно для таких компонентов, как Sidebar или Dialog, которые представляют из себя как бы «коробку», в которую можно что-то положить. Для таких компонентов можно использовать специальный проп children, который передаст дочерние элементы сразу на вывод.\n\nПодробнее: <a href='https://react.dev/learn/passing-props-to-a-component#passing-jsx-as-children' target='_blank'>Документация React (eng)</a>"
     },
     {
-      "id": 4,
+      "id": 80,
       "text": "Что такое порталы в React?",
       "hasOptions": false,
       "answer": "Порталы позволяют рендерить дочерние элементы в DOM-узел, который находится вне DOM-иерархии родительского компонента. Типовой случай применения порталов — когда в родительском компоненте заданы стили overflow: hidden или z-index, но вам нужно, чтобы дочерний элемент визуально выходил за рамки своего контейнера. Чаще всего, это диалоговые окна, всплывающие карточки и всплывающие подсказки."
     },
     {
-      "id": 5,
+      "id": 81,
       "text": "Что такое Reconciliation (Cверка)?",
       "hasOptions": false,
       "answer": "Это процесс, посредством которого React обновляет DOM. Когда состояние компонента изменяется, React должен рассчитать необходимость обновления DOM. Это делается путем создания виртуального DOM и сравнения его с текущим DOM. В этом контексте виртуальный DOM будет содержать новое состояние компонента."
     },
     {
-      "id": 6,
+      "id": 82,
       "text": "Для чего используется хук useEffect в React?",
       "hasOptions": true,
       "options": [
@@ -956,7 +1080,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": 83,
       "text": "Что будет, если вторым аргументом в useEffect передать пустой массив []?",
       "hasOptions": true,
       "options": [
@@ -971,7 +1095,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": 84,
       "text": "Какой хук используется для создания состояния в компоненте?",
       "hasOptions": true,
       "options": [
@@ -982,7 +1106,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": 85,
       "text": "Какой элемент используется для группировки элементов без добавления дополнительных узлов в DOM?",
       "hasOptions": true,
       "options": [
@@ -993,7 +1117,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": 86,
       "text": "У нас есть массив со строками (arr), каждую из которых мы хотим отразить на странице. Какой метод массива нужно применить в return компонента?",
       "hasOptions": true,
       "options": [
@@ -1004,7 +1128,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": 87,
       "text": "Какой элемент используется для обработки ошибок в дереве компонентов?",
       "hasOptions": true,
       "options": [
@@ -1015,7 +1139,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": 88,
       "text": "Какой (какие) аргумент(ы) принимает хук useMemo?",
       "hasOptions": true,
       "options": [
@@ -1026,7 +1150,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": 89,
       "text": "Для чего используется хук useCallback в React?",
       "hasOptions": true,
       "options": [
@@ -1047,6 +1171,358 @@
         },
         { "id": 4, "text": "Мемоизации функций", "isCorrect": true }
       ]
+    }
+  ],
+
+  "nodejs": [
+    {
+      "id": 1,
+      "text": "Как работает Node.js? Объясните основные компоненты.",
+      "hasOptions": false,
+      "answer": "🚀 <b>Node.js — однопоточная асинхронная среда выполнения</b>\n\n<b>Основные компоненты:</b>\n\n1️⃣ <b>V8 Engine</b> (от Google Chrome)\n• Компилирует JavaScript в машинный код\n• Обеспечивает высокую производительность\n\n2️⃣ <b>Libuv</b>\n• Библиотека для асинхронных I/O-операций\n• Взаимодействие с операционной системой\n• Управляет Event Loop и пулом потоков\n\n3️⃣ <b>Event Loop</b>\n• Обрабатывает события в цикле\n• Распределяет задачи между потоками\n• Позволяет обрабатывать множество запросов одновременно\n\n4️⃣ <b>Non-blocking I/O</b>\n• Операции выполняются асинхронно\n• Не блокирует поток при ожидании\n• Эффективная обработка параллельных запросов\n\n💡 <b>Пример:</b>\n<code>// HTTP-сервер не блокируется при запросе к БД\napp.get('/users', async (req, res) => {\n  const users = await db.query('SELECT * FROM users');\n  res.json(users); // Другие запросы обрабатываются параллельно\n});</code>\n\n🎯 <b>Главное преимущество:</b> Неблокирующая система ввода/вывода!"
+    },
+    {
+      "id": 2,
+      "text": "Что такое Event Loop и как он работает?",
+      "hasOptions": false,
+      "answer": "🔄 <b>Event Loop — сердце асинхронности Node.js</b>\n\n<b>Что это:</b>\nМеханизм, который позволяет Node.js обрабатывать множество операций одновременно без многопоточности. Он постоянно проверяет очередь событий и выполняет связанные callback-функции.\n\n<b>Как работает:</b>\n<code>console.log('Старт');\n\nsetTimeout(() => {\n  console.log('Прошла секунда!');\n}, 1000);\n\nfs.readFile('file.txt', () => {\n  console.log('Файл готов!');\n});\n\nconsole.log('Финиш');\n\n// Вывод:\n// Старт\n// Финиш\n// Файл готов!\n// Прошла секунда!</code>\n\n💡 <b>Преимущества:</b>\n• Одновременное чтение файлов\n• Ответы на запросы\n• Работа с таймерами\n• Всё без блокировки!\n\n🎯 <b>Это делает Node.js быстрым для асинхронных задач!</b>"
+    },
+    {
+      "id": 3,
+      "text": "Какие фазы есть в Event Loop?",
+      "hasOptions": false,
+      "answer": "⏱️ <b>6 фаз Event Loop</b>\n\n<b>1. Timers (Таймеры)</b>\n• Выполняются setTimeout и setInterval\n• Время — это минимум, может задержаться\n<code>setTimeout(() => console.log('Прошла секунда!'), 1000);</code>\n\n<b>2. I/O Callbacks</b>\n• Выполняются callback'и асинхронных операций\n• Чтение файлов, ответы от сервера\n<code>fs.readFile('file.txt', () => console.log('Файл готов!'));</code>\n\n<b>3. Idle, Prepare</b>\n• Внутренние операции Node.js\n• Разработчик не использует напрямую\n\n<b>4. Poll (Опрос)</b>\n• Ожидание новых I/O событий\n• Node.js может блокироваться здесь\n• Обрабатывает завершенные операции\n\n<b>5. Check</b>\n• Выполняются setImmediate\n<code>setImmediate(() => console.log('Срочно!'));</code>\n\n<b>6. Close Callbacks</b>\n• Закрытие соединений и серверов\n<code>server.on('close', () => console.log('Сервер закрыт'));</code>\n\n💡 <b>Зная фазы, можно предсказать порядок выполнения!</b>"
+    },
+    {
+      "id": 4,
+      "text": "В чём разница между process.nextTick() и setImmediate()?",
+      "hasOptions": false,
+      "answer": "⚡ <b>process.nextTick() vs setImmediate()</b>\n\n<b>🕒 process.nextTick()</b>\n• Выполняется СРАЗУ после текущей операции\n• ДО перехода к следующей фазе Event Loop\n• Имеет наивысший приоритет\n<code>console.log('1');\nprocess.nextTick(() => console.log('2'));\nconsole.log('3');\n// Вывод: 1, 3, 2</code>\n\n<b>⏱️ setImmediate()</b>\n• Выполняется в фазе Check\n• ПОСЛЕ завершения I/O событий\n• Ниже приоритет, чем nextTick\n<code>console.log('1');\nsetImmediate(() => console.log('2'));\nconsole.log('3');\n// Вывод: 1, 3, 2 (но позже nextTick)</code>\n\n<b>Сравнение:</b>\n<code>process.nextTick(() => console.log('nextTick'));\nsetImmediate(() => console.log('setImmediate'));\n// Вывод:\n// nextTick\n// setImmediate</code>\n\n💡 <b>Когда использовать:</b>\n• nextTick — для очистки, избежания рекурсии\n• setImmediate — после I/O операций"
+    },
+    {
+      "id": 5,
+      "text": "Чем Event Loop в Node.js отличается от браузерного?",
+      "hasOptions": false,
+      "answer": "🔄 <b>Node.js vs Браузер Event Loop</b>\n\n<b>1. Отрисовка</b>\n• Браузер: Есть фаза отрисовки для обновления экрана\n• Node.js: Отрисовки нет, сразу к следующей задаче\n\n<b>2. Порядок работы</b>\n• Браузер: Код → микрозадачи → отрисовка → макрозадачи\n• Node.js: Таймеры → I/O → poll → check → close\n\n<b>3. Микро/макрозадачи</b>\n• Браузер: Микрозадачи (промисы) перед отрисовкой\n• Node.js: Микрозадачи между фазами, без пауз\n\n<b>4. Параллелизм</b>\n• Node.js: Worker threads для тяжёлых задач\n• Браузер: Web Workers (сложнее, больше ограничений)\n\n<b>Пример разницы:</b>\n<code>// В браузере\nsetTimeout(() => console.log('timeout'), 0);\nPromise.resolve().then(() => console.log('promise'));\n// promise, timeout (микрозадачи приоритетнее)\n\n// В Node.js порядок может отличаться\n// зависит от фазы Event Loop</code>\n\n💡 <b>Node.js оптимизирован для серверных задач, браузер — для UI!</b>"
+    },
+    {
+      "id": 6,
+      "text": "Что такое I/O-операции в Node.js?",
+      "hasOptions": false,
+      "answer": "💾 <b>I/O — Input/Output (Ввод/Вывод)</b>\n\n<b>Ввод (Input):</b>\n• Получение данных из внешнего источника\n• Чтение файла\n• Получение данных из сети\n• Ввод пользователя\n<code>fs.readFile('data.txt', (err, data) => {\n  console.log(data); // Ввод из файла\n});</code>\n\n<b>Вывод (Output):</b>\n• Отправка данных во внешнюю систему\n• Запись в файл\n• Отправка HTTP-ответа\n• Вывод в консоль\n<code>fs.writeFile('output.txt', 'Hello', () => {\n  console.log('Записано!'); // Вывод в файл\n});</code>\n\n<b>Блокирующий vs Неблокирующий I/O:</b>\n<code>// ❌ Блокирующий (синхронный)\nconst data = fs.readFileSync('file.txt');\nconsole.log(data); // Программа ждёт\n\n// ✅ Неблокирующий (асинхронный)\nfs.readFile('file.txt', (err, data) => {\n  console.log(data);\n});\nconsole.log('Продолжаю работать...'); // Не ждёт!</code>\n\n🎯 <b>Node.js ценится за неблокирующий I/O!</b>"
+    },
+    {
+      "id": 7,
+      "text": "Что такое Libuv и зачем нужен пул потоков?",
+      "hasOptions": false,
+      "answer": "🔧 <b>Libuv — кроссплатформенная библиотека для асинхронного I/O</b>\n\n<b>Что делает Libuv:</b>\n• Управляет Event Loop\n• Обеспечивает асинхронные операции\n• Взаимодействует с ОС\n• Управляет пулом потоков\n\n<b>Пул потоков (Thread Pool):</b>\n• По умолчанию 4 фоновых рабочих потока\n• Выполняют тяжёлые задачи (чтение файлов, криптография)\n• Основной поток остаётся свободным\n\n<b>Аналогия с рестораном:</b>\n• Основной поток = официант (принимает заказы)\n• Пул потоков = повара (готовят блюда)\n• Официант не ждёт поваров, обслуживает других клиентов\n\n<b>Пример:</b>\n<code>fs.readFile('big-file.txt', (err, data) => {\n  console.log('Файл прочитан!');\n});\nconsole.log('Продолжаю работать...');\n// Файл читается в пуле потоков\n// Event Loop продолжает работу</code>\n\n<b>Настройка размера пула:</b>\n<code>// В терминале\nUV_THREADPOOL_SIZE=8 node app.js</code>\n\n💡 <b>Если задач больше 4, они ждут в очереди!</b>"
+    },
+    {
+      "id": 8,
+      "text": "Что такое Worker Threads и когда их использовать?",
+      "hasOptions": false,
+      "answer": "🧵 <b>Worker Threads — многопоточность в Node.js</b>\n\n<b>Что это:</b>\nМодуль для создания отдельных потоков для CPU-интенсивных задач. Каждый воркер имеет свой V8 движок и изолированную память.\n\n<b>Когда использовать:</b>\n• Тяжёлые вычисления (Фибоначчи, обработка изображений)\n• Сложные математические операции\n• Парсинг больших данных\n\n<b>Пример:</b>\n<code>const { Worker } = require('worker_threads');\n\n// Основной поток\nconst worker = new Worker('./worker.js', {\n  workerData: { n: 40 }\n});\n\nworker.on('message', (result) => {\n  console.log('Результат:', result);\n});\n\nconsole.log('Основной поток продолжает работать...');\n\n// worker.js\nconst { parentPort, workerData } = require('worker_threads');\n\nfunction fibonacci(n) {\n  if (n <= 1) return n;\n  return fibonacci(n - 1) + fibonacci(n - 2);\n}\n\nconst result = fibonacci(workerData.n);\nparentPort.postMessage(result);</code>\n\n<b>Особенности:</b>\n• Воркеры изолированы\n• Обмен данными через сообщения\n• Потребляют больше памяти\n• Не для I/O (используйте libuv)\n\n💡 <b>Worker Threads ≠ Libuv пул потоков!</b>"
+    },
+    {
+      "id": 9,
+      "text": "Что такое объект process в Node.js?",
+      "hasOptions": false,
+      "answer": "⚙️ <b>process — глобальный объект для управления процессом</b>\n\n<b>Основные свойства:</b>\n<code>// Переменные окружения\nconsole.log(process.env.NODE_ENV); // 'production'\n\n// Аргументы командной строки\nconsole.log(process.argv); // ['node', 'app.js', '--port', '3000']\n\n// Текущая директория\nconsole.log(process.cwd()); // '/home/user/project'\n\n// Версия Node.js\nconsole.log(process.version); // 'v18.16.0'\n\n// Платформа\nconsole.log(process.platform); // 'linux', 'win32', 'darwin'</code>\n\n<b>Управление процессом:</b>\n<code>// Завершить процесс\nprocess.exit(0); // 0 = успех, 1 = ошибка\n\n// Обработка ошибок\nprocess.on('uncaughtException', (err) => {\n  console.error('Необработанная ошибка:', err);\n  process.exit(1);\n});\n\n// Обработка промисов\nprocess.on('unhandledRejection', (reason) => {\n  console.error('Необработанный промис:', reason);\n});</code>\n\n<b>Полезные методы:</b>\n<code>// Использование памяти\nconsole.log(process.memoryUsage());\n\n// Время работы процесса\nconsole.log(process.uptime()); // в секундах</code>\n\n💡 <b>process доступен глобально, не требует require!</b>"
+    },
+    {
+      "id": 10,
+      "text": "Что такое __dirname и __filename?",
+      "hasOptions": false,
+      "answer": "📁 <b>__dirname и __filename — пути к текущему файлу</b>\n\n<b>__dirname:</b>\nАбсолютный путь к директории текущего файла\n<code>// В файле /home/user/project/src/app.js\nconsole.log(__dirname);\n// Вывод: /home/user/project/src</code>\n\n<b>__filename:</b>\nАбсолютный путь к текущему файлу\n<code>// В файле /home/user/project/src/app.js\nconsole.log(__filename);\n// Вывод: /home/user/project/src/app.js</code>\n\n<b>Практическое применение:</b>\n<code>const path = require('path');\n\n// Путь к файлу относительно текущего\nconst configPath = path.join(__dirname, 'config', 'database.json');\n// /home/user/project/src/config/database.json\n\n// Чтение файла\nconst fs = require('fs');\nfs.readFile(path.join(__dirname, 'data.txt'), 'utf8', (err, data) => {\n  console.log(data);\n});</code>\n\n<b>В ES Modules (import/export):</b>\n<code>import { fileURLToPath } from 'url';\nimport { dirname } from 'path';\n\nconst __filename = fileURLToPath(import.meta.url);\nconst __dirname = dirname(__filename);</code>\n\n💡 <b>Используйте для кроссплатформенных путей!</b>"
+    },
+    {
+      "id": 11,
+      "text": "Что такое middleware в Node.js/Express?",
+      "hasOptions": false,
+      "answer": "🔗 <b>Middleware — промежуточное ПО</b>\n\n<b>Что это:</b>\nФункции, которые имеют доступ к объектам запроса (req), ответа (res) и следующей функции (next) в цикле \"запрос-ответ\".\n\n<b>Что может делать middleware:</b>\n• Выполнять любой код\n• Изменять req и res\n• Завершать цикл запрос-ответ\n• Вызывать следующий middleware\n\n<b>Пример:</b>\n<code>// Логирование запросов\napp.use((req, res, next) => {\n  console.log(`${req.method} ${req.url}`);\n  next(); // Передаём управление дальше\n});\n\n// Проверка авторизации\nfunction authMiddleware(req, res, next) {\n  if (!req.headers.authorization) {\n    return res.status(401).json({ error: 'Не авторизован' });\n  }\n  next();\n}\n\napp.get('/profile', authMiddleware, (req, res) => {\n  res.json({ user: 'John' });\n});</code>\n\n<b>Типы middleware:</b>\n• Application-level (app.use)\n• Router-level (router.use)\n• Error-handling\n• Built-in (express.json)\n• Third-party (cors, helmet)\n\n💡 <b>Middleware выполняются по порядку!</b>"
+    },
+    {
+      "id": 12,
+      "text": "Что такое Streams в Node.js? Назовите 4 типа.",
+      "hasOptions": false,
+      "answer": "🌊 <b>Streams — потоки данных</b>\n\n<b>Что это:</b>\nМеханизм для работы с данными по частям (chunks), вместо загрузки всего в память. Идеально для больших файлов!\n\n<b>4 типа потоков:</b>\n\n<b>1️⃣ Readable (Читаемые)</b>\n• Чтение данных из источника\n<code>const readStream = fs.createReadStream('big-file.txt');\nreadStream.on('data', (chunk) => {\n  console.log('Получен кусок:', chunk.length);\n});</code>\n\n<b>2️⃣ Writable (Записываемые)</b>\n• Запись данных в пункт назначения\n<code>const writeStream = fs.createWriteStream('output.txt');\nwriteStream.write('Hello ');\nwriteStream.write('World!');\nwriteStream.end();</code>\n\n<b>3️⃣ Duplex (Дуплексные)</b>\n• Одновременно читаемые и записываемые\n• Пример: TCP-сокеты\n\n<b>4️⃣ Transform (Трансформирующие)</b>\n• Изменяют данные \"на лету\"\n<code>const { Transform } = require('stream');\nconst upperCase = new Transform({\n  transform(chunk, encoding, callback) {\n    this.push(chunk.toString().toUpperCase());\n    callback();\n  }\n});</code>\n\n💡 <b>Streams экономят память!</b>"
+    },
+    {
+      "id": 13,
+      "text": "Как работать с pipe() в Streams?",
+      "hasOptions": false,
+      "answer": "🔗 <b>pipe() — соединение потоков</b>\n\n<b>Что делает:</b>\nМетод .pipe() соединяет Readable-поток с Writable-потоком для автоматической передачи данных. Чтение новой порции не начинается, пока предыдущая не записана.\n\n<b>Пример — копирование файла:</b>\n<code>const fs = require('fs');\n\nconst readStream = fs.createReadStream('input.txt');\nconst writeStream = fs.createWriteStream('output.txt');\n\nreadStream.pipe(writeStream);\n\nwriteStream.on('finish', () => {\n  console.log('Файл скопирован!');\n});</code>\n\n<b>Цепочка pipe с Transform:</b>\n<code>const { Transform } = require('stream');\nconst zlib = require('zlib');\n\n// Чтение → Сжатие → Запись\nfs.createReadStream('input.txt')\n  .pipe(zlib.createGzip()) // Сжимаем\n  .pipe(fs.createWriteStream('input.txt.gz'))\n  .on('finish', () => console.log('Сжато!'));</code>\n\n💡 <b>pipe() синхронизирует скорость чтения и записи!</b>"
+    },
+    {
+      "id": 14,
+      "text": "Как масштабировать Node.js приложение?",
+      "hasOptions": false,
+      "answer": "📈 <b>3 способа масштабирования</b>\n\n<b>1️⃣ Модуль cluster</b>\n• Запускает несколько копий приложения на одном сервере\n• Использует все ядра процессора\n<code>const cluster = require('cluster');\nconst os = require('os');\n\nif (cluster.isMaster) {\n  const numCPUs = os.cpus().length;\n  for (let i = 0; i < numCPUs; i++) {\n    cluster.fork(); // Создаём воркеры\n  }\n} else {\n  // Код приложения\n  require('./app');\n}</code>\n\n<b>2️⃣ Балансировка нагрузки (Nginx)</b>\n• Распределяет запросы между серверами\n• Можно добавлять новые серверы\n\n<b>3️⃣ Docker контейнеры</b>\n• Упаковка приложения в контейнер\n• Легко масштабировать и переносить\n<code>docker run -d --name app1 myapp\ndocker run -d --name app2 myapp</code>\n\n💡 <b>Выбор зависит от нагрузки!</b>"
+    },
+    {
+      "id": 15,
+      "text": "В чём разница между child_process и worker_threads?",
+      "hasOptions": false,
+      "answer": "🔀 <b>child_process vs worker_threads</b>\n\n<b>child_process (Дочерние процессы)</b>\n• Создаёт отдельный процесс Node.js\n• Полная изоляция (своя память)\n• Тяжелее по ресурсам\n• Обмен через IPC (Inter-Process Communication)\n<code>const { fork } = require('child_process');\nconst child = fork('./child.js');\nchild.send({ task: 'heavy' });\nchild.on('message', (result) => console.log(result));</code>\n\n<b>worker_threads (Воркер потоки)</b>\n• Создаёт поток внутри процесса\n• Легче, делят память процесса\n• Изолированные JS-контексты\n• Обмен через postMessage\n<code>const { Worker } = require('worker_threads');\nconst worker = new Worker('./worker.js');\nworker.postMessage({ task: 'heavy' });\nworker.on('message', (result) => console.log(result));</code>\n\n<b>Когда что использовать:</b>\n• child_process — для изоляции, запуска внешних скриптов\n• worker_threads — для CPU-задач, меньше overhead\n\n💡 <b>Worker threads легче, но не для I/O!</b>"
+    },
+    {
+      "id": 16,
+      "text": "Что такое модуль cluster и как он работает?",
+      "hasOptions": false,
+      "answer": "👥 <b>Cluster — использование всех ядер CPU</b>\n\n<b>Проблема:</b>\nNode.js однопоточный, использует только 1 ядро процессора.\n\n<b>Решение — cluster:</b>\n• Создаёт несколько процессов (воркеров)\n• Один мастер-процесс управляет воркерами\n• Все воркеры делят один порт\n• Запросы распределяются автоматически\n\n<b>Пример:</b>\n<code>const cluster = require('cluster');\nconst http = require('http');\nconst numCPUs = require('os').cpus().length;\n\nif (cluster.isMaster) {\n  console.log(`Мастер ${process.pid} запущен`);\n  \n  // Создаём воркеры\n  for (let i = 0; i < numCPUs; i++) {\n    cluster.fork();\n  }\n  \n  // Перезапуск при падении\n  cluster.on('exit', (worker) => {\n    console.log(`Воркер ${worker.process.pid} умер`);\n    cluster.fork();\n  });\n} else {\n  // Воркеры создают HTTP-сервер\n  http.createServer((req, res) => {\n    res.end('Hello from ' + process.pid);\n  }).listen(3000);\n}</code>\n\n💡 <b>Воркеры не делят состояние — используйте Redis!</b>"
+    },
+    {
+      "id": 17,
+      "text": "Что такое PM2 и зачем он нужен?",
+      "hasOptions": false,
+      "answer": "🔧 <b>PM2 — менеджер процессов для Node.js</b>\n\n<b>Что делает:</b>\n• Запускает и управляет приложениями\n• Автоматический перезапуск при падении\n• Кластеризация (несколько воркеров)\n• Мониторинг и логи\n• Zero-downtime reload\n\n<b>Установка и запуск:</b>\n<code>npm install -g pm2\n\n// Запуск приложения\npm2 start app.js\n\n// Кластерный режим (4 воркера)\npm2 start app.js -i 4\n\n// Использовать все ядра\npm2 start app.js -i max</code>\n\n<b>Управление:</b>\n<code>pm2 list          // Список приложений\npm2 stop app      // Остановить\npm2 restart app   // Перезапустить\npm2 reload app    // Перезапуск без downtime\npm2 logs          // Просмотр логов\npm2 monit         // Мониторинг</code>\n\n<b>Zero-downtime reload:</b>\n<code>pm2 reload app  // Перезапускает воркеры по очереди</code>\n\n💡 <b>PM2 — стандарт для production!</b>"
+    },
+    {
+      "id": 18,
+      "text": "Что такое Buffer в Node.js?",
+      "hasOptions": false,
+      "answer": "💾 <b>Buffer — работа с бинарными данными</b>\n\n<b>Что это:</b>\nВстроенный класс для работы с бинарными данными. Представляет область памяти фиксированного размера вне кучи V8.\n\n<b>Создание Buffer:</b>\n<code>// Из строки\nconst buf1 = Buffer.from('Hello');\nconsole.log(buf1); // &lt;Buffer 48 65 6c 6c 6f&gt;\n\n// Пустой буфер размером 10 байт\nconst buf2 = Buffer.alloc(10);\n\n// Из массива байтов\nconst buf3 = Buffer.from([72, 101, 108, 108, 111]);\nconsole.log(buf3.toString()); // 'Hello'</code>\n\n<b>Работа с Buffer:</b>\n<code>const buf = Buffer.from('Hello World');\n\n// Чтение\nconsole.log(buf[0]); // 72 (код 'H')\nconsole.log(buf.toString()); // 'Hello World'\nconsole.log(buf.toString('hex')); // '48656c6c6f20576f726c64'\n\n// Запись\nbuf.write('Hi', 0);\nconsole.log(buf.toString()); // 'Hillo World'</code>\n\n💡 <b>Используется для файлов, сокетов, криптографии!</b>"
+    },
+    {
+      "id": 19,
+      "text": "Что такое модуль path и зачем он нужен?",
+      "hasOptions": false,
+      "answer": "🛣️ <b>path — работа с путями файлов</b>\n\n<b>Зачем нужен:</b>\nДелает код кроссплатформенным (Windows использует \\, Linux/Mac — /)\n\n<b>Основные методы:</b>\n<code>const path = require('path');\n\n// Соединить пути\nconst fullPath = path.join('/home', 'user', 'docs', 'file.txt');\n// '/home/user/docs/file.txt'\n\n// Абсолютный путь\nconst absPath = path.resolve('docs', 'file.txt');\n// '/current/directory/docs/file.txt'\n\n// Имя файла\nconst filename = path.basename('/home/user/file.txt');\n// 'file.txt'\n\n// Директория\nconst dir = path.dirname('/home/user/file.txt');\n// '/home/user'\n\n// Расширение\nconst ext = path.extname('file.txt');\n// '.txt'\n\n// Разобрать путь\nconst parsed = path.parse('/home/user/file.txt');\n// { root: '/', dir: '/home/user', base: 'file.txt', ext: '.txt', name: 'file' }</code>\n\n💡 <b>Всегда используйте path для кроссплатформенности!</b>"
+    },
+    {
+      "id": 20,
+      "text": "Что такое модуль fs и его основные методы?",
+      "hasOptions": false,
+      "answer": "📂 <b>fs — файловая система</b>\n\n<b>Чтение файлов:</b>\n<code>const fs = require('fs');\n\n// Асинхронное чтение\nfs.readFile('file.txt', 'utf8', (err, data) => {\n  if (err) throw err;\n  console.log(data);\n});\n\n// Синхронное (блокирует!)\nconst data = fs.readFileSync('file.txt', 'utf8');\n\n// Промисы (Node.js 10+)\nconst fsPromises = require('fs').promises;\nconst data = await fsPromises.readFile('file.txt', 'utf8');</code>\n\n<b>Запись файлов:</b>\n<code>// Перезаписать файл\nfs.writeFile('file.txt', 'Hello', (err) => {\n  if (err) throw err;\n  console.log('Записано!');\n});\n\n// Добавить в конец\nfs.appendFile('file.txt', '\\nWorld', (err) => {});</code>\n\n<b>Работа с директориями:</b>\n<code>// Создать папку\nfs.mkdir('new-folder', (err) => {});\n\n// Прочитать содержимое\nfs.readdir('./', (err, files) => {\n  console.log(files); // ['file1.txt', 'file2.txt']\n});</code>\n\n💡 <b>Всегда обрабатывайте ошибки!</b>"
+    },
+    {
+      "id": 21,
+      "text": "Что такое модуль events и EventEmitter?",
+      "hasOptions": false,
+      "answer": "📡 <b>events — событийная модель</b>\n\n<b>EventEmitter:</b>\nКласс для работы с событиями. Практически все модули Node.js используют событийную модель.\n\n<b>Основные методы:</b>\n<code>const EventEmitter = require('events');\nconst emitter = new EventEmitter();\n\n// Подписка на событие\nemitter.on('data', (message) => {\n  console.log('Получено:', message);\n});\n\n// Одноразовая подписка\nemitter.once('connect', () => {\n  console.log('Подключено!');\n});\n\n// Генерация события\nemitter.emit('data', 'Hello World');\nemitter.emit('connect');</code>\n\n<b>Создание своего EventEmitter:</b>\n<code>class MyEmitter extends EventEmitter {}\n\nconst myEmitter = new MyEmitter();\n\nmyEmitter.on('event', () => {\n  console.log('Событие произошло!');\n});\n\nmyEmitter.emit('event');</code>\n\n<b>Удаление слушателей:</b>\n<code>const callback = () => console.log('Hello');\nemitter.on('test', callback);\nemitter.off('test', callback); // Удалить\nemitter.removeAllListeners('test'); // Удалить все</code>\n\n💡 <b>Streams, HTTP, процессы — все используют события!</b>"
+    },
+    {
+      "id": 22,
+      "text": "Как создать HTTP-сервер в Node.js?",
+      "hasOptions": false,
+      "answer": "🌐 <b>HTTP-сервер на чистом Node.js</b>\n\n<b>Простой сервер:</b>\n<code>const http = require('http');\n\nconst server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'text/plain' });\n  res.end('Hello World!');\n});\n\nserver.listen(3000, () => {\n  console.log('Сервер запущен на http://localhost:3000');\n});</code>\n\n<b>Роутинг:</b>\n<code>const server = http.createServer((req, res) => {\n  if (req.url === '/' && req.method === 'GET') {\n    res.writeHead(200, { 'Content-Type': 'text/html' });\n    res.end('&lt;h1&gt;Главная&lt;/h1&gt;');\n  } else if (req.url === '/api/users' && req.method === 'GET') {\n    res.writeHead(200, { 'Content-Type': 'application/json' });\n    res.end(JSON.stringify({ users: ['John', 'Jane'] }));\n  } else {\n    res.writeHead(404);\n    res.end('Not Found');\n  }\n});</code>\n\n<b>Обработка POST:</b>\n<code>if (req.method === 'POST') {\n  let body = '';\n  req.on('data', chunk => body += chunk);\n  req.on('end', () => {\n    const data = JSON.parse(body);\n    res.end('Получено: ' + data.name);\n  });\n}</code>\n\n💡 <b>Для production используйте Express!</b>"
+    },
+    {
+      "id": 23,
+      "text": "Что такое Express и зачем он нужен?",
+      "hasOptions": false,
+      "answer": "⚡ <b>Express — минималистичный веб-фреймворк</b>\n\n<b>Зачем нужен:</b>\n• Упрощает создание HTTP-серверов\n• Удобная маршрутизация\n• Middleware для обработки запросов\n• Поддержка шаблонов\n• Обработка статических файлов\n\n<b>Установка и базовый сервер:</b>\n<code>npm install express\n\nconst express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});\n\napp.get('/api/users', (req, res) => {\n  res.json({ users: ['John', 'Jane'] });\n});\n\napp.post('/api/users', (req, res) => {\n  res.status(201).json({ message: 'Создано' });\n});\n\napp.listen(3000, () => {\n  console.log('Сервер на http://localhost:3000');\n});</code>\n\n<b>Middleware:</b>\n<code>// Парсинг JSON\napp.use(express.json());\n\n// Логирование\napp.use((req, res, next) => {\n  console.log(`${req.method} ${req.url}`);\n  next();\n});</code>\n\n💡 <b>Express — стандарт для Node.js API!</b>"
+    },
+    {
+      "id": 24,
+      "text": "Как запретить чтение cookies со стороны клиента?",
+      "hasOptions": false,
+      "answer": "🍪 <b>Защита cookies с HttpOnly</b>\n\n<b>Проблема:</b>\nJavaScript может читать cookies через document.cookie, что опасно при XSS-атаках.\n\n<b>Решение — атрибут HttpOnly:</b>\n<code>// В Express\nres.cookie('sessionId', '12345', {\n  httpOnly: true,  // ✅ Запрещает доступ через JS\n  secure: true,    // Только HTTPS\n  sameSite: 'strict' // Защита от CSRF\n});</code>\n\n<b>Все атрибуты безопасности:</b>\n<code>res.cookie('token', 'abc123', {\n  httpOnly: true,     // Нет доступа через document.cookie\n  secure: true,       // Только по HTTPS\n  sameSite: 'strict', // Не отправлять в межсайтовых запросах\n  maxAge: 3600000,    // Время жизни (1 час)\n  domain: '.example.com', // Домен\n  path: '/'           // Путь\n});</code>\n\n<b>Почему важно:</b>\n• HttpOnly — защита от XSS (кража токенов)\n• Secure — защита от перехвата по HTTP\n• SameSite — защита от CSRF\n\n💡 <b>Всегда используйте HttpOnly для сессий и токенов!</b>"
+    },
+    {
+      "id": 25,
+      "text": "Назовите основные уязвимости из OWASP Top 10 для Node.js",
+      "hasOptions": false,
+      "answer": "🔒 <b>OWASP Top 10 — критические уязвимости</b>\n\n<b>A01: Broken Access Control</b>\n• Проблемы контроля доступа\n• Защита: Guards, проверка владельца ресурса\n\n<b>A02: Cryptographic Failures</b>\n• Слабая криптография, plaintext пароли\n• Защита: bcrypt для паролей, HTTPS\n\n<b>A03: Injection (SQL, NoSQL)</b>\n• Вредный код в запросах\n• Защита: Параметризованные запросы, ORM\n<code>// ❌ Плохо\ndb.query(`SELECT * FROM users WHERE email = '${email}'`);\n// ✅ Хорошо\ndb.query('SELECT * FROM users WHERE email = ?', [email]);</code>\n\n<b>A04: Insecure Design</b>\n• Отсутствие threat modeling\n• Защита: Rate limiting, валидация на уровне дизайна\n\n<b>A05: Security Misconfiguration</b>\n• Дефолтные пароли, stack traces в production\n• Защита: helmet, скрытие ошибок\n\n<b>A07: Authentication Failures</b>\n• Слабые пароли, JWT без expiration\n• Защита: Сильные secrets, MFA\n\n<b>A10: SSRF</b>\n• Запросы к внутренним сервисам\n• Защита: Whitelist URL\n\n💡 <b>Используйте helmet, validator, rate limiting!</b>"
+    },
+    {
+      "id": 26,
+      "text": "Что такое callback-функция?",
+      "hasOptions": false,
+      "answer": "Callback — это функция, которая передается как аргумент в другую функцию и вызывается после завершения основной операции."
+    },
+    {
+      "id": 27,
+      "text": "Какой глобальный объект содержит аргументы командной строки?",
+      "hasOptions": true,
+      "options": [
+        { "id": 1, "text": "process.argv", "isCorrect": true },
+        { "id": 2, "text": "global.args", "isCorrect": false },
+        { "id": 3, "text": "process.env", "isCorrect": false },
+        { "id": 4, "text": "cli.args", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 28,
+      "text": "Что такое package.json?",
+      "hasOptions": false,
+      "answer": "package.json — это файл конфигурации проекта Node.js, где описаны зависимости, скрипты и метаданные проекта."
+    },
+    {
+      "id": 29,
+      "text": "Какой метод завершает процесс Node.js?",
+      "hasOptions": true,
+      "options": [
+        { "id": 1, "text": "process.exit()", "isCorrect": true },
+        { "id": 2, "text": "process.stop()", "isCorrect": false },
+        { "id": 3, "text": "exit()", "isCorrect": false },
+        { "id": 4, "text": "end()", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 30,
+      "text": "В чем отличие между require и import?",
+      "hasOptions": false,
+      "answer": "require() — CommonJS, работает синхронно; import — ES-модули, работает асинхронно и требует дополнительной настройки."
+    },
+    {
+      "id": 31,
+      "text": "Что такое middleware в Express?",
+      "hasOptions": false,
+      "answer": "Middleware — это функция, которая имеет доступ к объектам запроса и ответа и следующей функции в цикле обработки запроса."
+    },
+    {
+      "id": 32,
+      "text": "Какой модуль используется для работы с путями файлов?",
+      "hasOptions": true,
+      "options": [
+        { "id": 1, "text": "path", "isCorrect": true },
+        { "id": 2, "text": "fs", "isCorrect": false },
+        { "id": 3, "text": "os", "isCorrect": false },
+        { "id": 4, "text": "url", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 33,
+      "text": "Какой метод используется для запуска сервера на определённом порту?",
+      "hasOptions": false,
+      "answer": "server.listen(port) — запускает сервер на указанном порту."
+    },
+    {
+      "id": 34,
+      "text": "Что такое поток (stream) в Node.js?",
+      "hasOptions": false,
+      "answer": "Поток — это абстракция для работы с последовательными данными (например, чтение файлов, сетевые запросы)."
+    },
+    {
+      "id": 35,
+      "text": "Какой модуль используется для работы с событиями?",
+      "hasOptions": true,
+      "options": [
+        { "id": 1, "text": "events", "isCorrect": true },
+        { "id": 2, "text": "eventemitter", "isCorrect": false },
+        { "id": 3, "text": "observer", "isCorrect": false },
+        { "id": 4, "text": "callback", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 36,
+      "text": "Какой метод используется для записи данных в файл?",
+      "hasOptions": true,
+      "options": [
+        { "id": 1, "text": "fs.writeFile", "isCorrect": true },
+        { "id": 2, "text": "fs.saveFile", "isCorrect": false },
+        { "id": 3, "text": "fs.append", "isCorrect": false },
+        { "id": 4, "text": "fs.createFile", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 37,
+      "text": "Что такое process.env?",
+      "hasOptions": false,
+      "answer": "process.env — это объект, содержащий переменные окружения процесса Node.js."
+    },
+    {
+      "id": 38,
+      "text": "Как отловить необработанную ошибку в Node.js?",
+      "hasOptions": false,
+      "answer": "С помощью process.on('uncaughtException', fn) можно обработать необработанные ошибки."
+    },
+    {
+      "id": 39,
+      "text": "Какой метод используется для установки таймера?",
+      "hasOptions": true,
+      "options": [
+        { "id": 1, "text": "setTimeout", "isCorrect": true },
+        { "id": 2, "text": "setInterval", "isCorrect": false },
+        { "id": 3, "text": "setImmediate", "isCorrect": false },
+        { "id": 4, "text": "setTimer", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 40,
+      "text": "Какой модуль позволяет создавать веб-сервер?",
+      "hasOptions": true,
+      "options": [
+        { "id": 1, "text": "http", "isCorrect": true },
+        { "id": 2, "text": "net", "isCorrect": false },
+        { "id": 3, "text": "dns", "isCorrect": false },
+        { "id": 4, "text": "stream", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 41,
+      "text": "Какой командой обновить все пакеты в проекте?",
+      "hasOptions": true,
+      "options": [
+        { "id": 1, "text": "npm update", "isCorrect": true },
+        { "id": 2, "text": "npm upgrade", "isCorrect": false },
+        { "id": 3, "text": "npm refresh", "isCorrect": false },
+        { "id": 4, "text": "npm install-all", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 42,
+      "text": "Что такое асинхронность в Node.js?",
+      "hasOptions": false,
+      "answer": "Асинхронность — это возможность выполнять операции без блокировки основного потока, используя колбэки, промисы или async/await."
+    },
+    {
+      "id": 43,
+      "text": "Какой метод позволяет читать данные из stdin?",
+      "hasOptions": false,
+      "answer": "process.stdin.on('data', fn) — позволяет читать данные из стандартного ввода."
+    },
+    {
+      "id": 44,
+      "text": "Какой модуль используется для работы с буферами?",
+      "hasOptions": true,
+      "options": [
+        { "id": 1, "text": "buffer", "isCorrect": true },
+        { "id": 2, "text": "stream", "isCorrect": false },
+        { "id": 3, "text": "os", "isCorrect": false },
+        { "id": 4, "text": "arraybuffer", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 45,
+      "text": "Какой метод используется для обработки ошибок в асинхронных функциях?",
+      "hasOptions": false,
+      "answer": "try/catch внутри async/await функции или обработка промиса через .catch()."
+    },
+    {
+      "id": 46,
+      "text": "Какой модуль позволяет запускать дочерние процессы?",
+      "hasOptions": true,
+      "options": [
+        { "id": 1, "text": "child_process", "isCorrect": true },
+        { "id": 2, "text": "process", "isCorrect": false },
+        { "id": 3, "text": "worker_threads", "isCorrect": false },
+        { "id": 4, "text": "cluster", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 47,
+      "text": "Что такое require.cache?",
+      "hasOptions": false,
+      "answer": "require.cache — это объект, в котором Node.js хранит кэшированные модули, чтобы не загружать их повторно."
+    },
+    {
+      "id": 48,
+      "text": "Какой модуль используется для создания HTTPS сервера?",
+      "hasOptions": true,
+      "options": [
+        { "id": 1, "text": "https", "isCorrect": true },
+        { "id": 2, "text": "http", "isCorrect": false },
+        { "id": 3, "text": "ssl", "isCorrect": false },
+        { "id": 4, "text": "tls", "isCorrect": false }
+      ]
+    },
+    {
+      "id": 49,
+      "text": "Что делает метод fs.readFile?",
+      "hasOptions": false,
+      "answer": "fs.readFile асинхронно читает содержимое файла и возвращает результат через колбэк или промис."
     }
   ]
 }

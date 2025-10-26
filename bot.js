@@ -34,6 +34,7 @@ bot.command("start", async (ctx) => {
     .text("React")
     .row()
     .text("Nodejs")
+    .text("db")
     .resized();
   console.log(ctx.api.token);
   await ctx.reply(
@@ -42,47 +43,50 @@ bot.command("start", async (ctx) => {
   await ctx.reply("Выберите язык", { reply_markup: startKeyboard });
 });
 
-bot.hears(["HTML", "CSS", "javascript", "React", "Nodejs"], async (ctx) => {
-  const topic = ctx.message.text.toLowerCase();
-  const question = getRandomQuestion(topic);
+bot.hears(
+  ["HTML", "CSS", "javascript", "React", "Nodejs", "db"],
+  async (ctx) => {
+    const topic = ctx.message.text.toLowerCase();
+    const question = getRandomQuestion(topic);
 
-  //   const inlineKeyboard = new InlineKeyboard().text(
-  //     "Узнать ответ",
-  //     JSON.stringify({
-  //       type: ctx.message.text,
-  //       questionId: question.id,
-  //     })
-  //   );
+    //   const inlineKeyboard = new InlineKeyboard().text(
+    //     "Узнать ответ",
+    //     JSON.stringify({
+    //       type: ctx.message.text,
+    //       questionId: question.id,
+    //     })
+    //   );
 
-  let inlineKeyboard;
-  if (question.hasOptions) {
-    inlineKeyboard = new InlineKeyboard();
-    question.options.forEach((option) => {
-      inlineKeyboard
-        .text(
-          option.text,
-          JSON.stringify({
-            type: `${topic}-option`,
-            isCorrect: option.isCorrect,
-            questionId: question.id,
-          })
-        )
-        .row();
+    let inlineKeyboard;
+    if (question.hasOptions) {
+      inlineKeyboard = new InlineKeyboard();
+      question.options.forEach((option) => {
+        inlineKeyboard
+          .text(
+            option.text,
+            JSON.stringify({
+              type: `${topic}-option`,
+              isCorrect: option.isCorrect,
+              questionId: question.id,
+            })
+          )
+          .row();
+      });
+    } else {
+      inlineKeyboard = new InlineKeyboard().text(
+        "Узнать ответ",
+        JSON.stringify({
+          type: ctx.message.text,
+          questionId: question.id,
+        })
+      );
+    }
+
+    await ctx.reply(question.text, {
+      reply_markup: inlineKeyboard,
     });
-  } else {
-    inlineKeyboard = new InlineKeyboard().text(
-      "Узнать ответ",
-      JSON.stringify({
-        type: ctx.message.text,
-        questionId: question.id,
-      })
-    );
   }
-
-  await ctx.reply(question.text, {
-    reply_markup: inlineKeyboard,
-  });
-});
+);
 
 bot.on("callback_query:data", async (ctx) => {
   const callbackData = JSON.parse(ctx.callbackQuery.data);
