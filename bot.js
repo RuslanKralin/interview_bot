@@ -2,7 +2,15 @@ import { Bot, Keyboard, InlineKeyboard, GrammyError, HttpError } from "grammy";
 import dotenv from "dotenv";
 import { getRandomQuestion } from "./utils.js";
 import { getCorrectAnswer } from "./utils.js";
+import http from "http";
 dotenv.config();
+
+// Проверка наличия токена
+if (!process.env.BOT_TOKEN) {
+  console.error("❌ BOT_TOKEN не установлен в переменных окружения!");
+  console.error("Установите BOT_TOKEN на Render: Dashboard > Environment > Environment Variables");
+  process.exit(1);
+}
 
 const bot = new Bot(process.env.BOT_TOKEN);
 
@@ -101,4 +109,17 @@ bot.catch((err) => {
   }
 });
 
+// Запуск бота
 bot.start();
+console.log("✅ Бот запущен успешно!");
+
+// HTTP сервер для Render (Web Service требует открытый порт)
+const PORT = process.env.PORT || 3000;
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { "Content-Type": "text/plain" });
+  res.end("Telegram Bot is running!");
+});
+
+server.listen(PORT, () => {
+  console.log(`🌐 HTTP сервер запущен на порту ${PORT}`);
+});
