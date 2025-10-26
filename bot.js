@@ -6,14 +6,20 @@ import http from "http";
 dotenv.config();
 
 // Получаем токен из переменной окружения или используем захардкоженный
-const BOT_TOKEN = process.env.BOT_TOKEN || "AAEYn1zOlTO0tOgPyK6sK86DlivBqvZUbXQ";
+const BOT_TOKEN =
+  process.env.BOT_TOKEN || "8239612290:AAEYn1zOlTO0tOgPyK6sK86DlivBqvZUbXQ";
 
 console.log(`🔑 Используется токен: ${BOT_TOKEN.substring(0, 10)}...`);
 
 // Проверка формата токена
-if (!BOT_TOKEN || BOT_TOKEN.length < 30) {
-  console.error("❌ BOT_TOKEN пустой или слишком короткий!");
-  console.error("Токен должен быть вида: 1234567890:ABCdefGHIjklMNOpqrsTUVwxyz");
+if (!BOT_TOKEN || BOT_TOKEN.length < 30 || !BOT_TOKEN.includes(":")) {
+  console.error("❌ BOT_TOKEN неправильный!");
+  console.error(
+    "Токен должен быть вида: 1234567890:ABCdefGHIjklMNOpqrsTUVwxyz"
+  );
+  console.error(
+    "Получите токен от @BotFather в Telegram: /mybots → выберите бота → API Token"
+  );
   process.exit(1);
 }
 
