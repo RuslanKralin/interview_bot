@@ -2032,33 +2032,31 @@
 
   "ts": [
     {
-      "typescript": [
-        {
-          "id": 1,
-          "text": "Что такое TypeScript и зачем он нужен?",
-          "hasOptions": false,
-          "answer": "🔷 <b>TypeScript — JavaScript с типами</b>\n\n<b>Что это:</b>\nНадстройка над JavaScript, добавляющая статическую типизацию.\n\n<b>Преимущества:</b>\n• Ловит ошибки на этапе разработки\n• Автодополнение в IDE\n• Рефакторинг без страха\n• Лучшая документация кода\n• Поддержка современного JS\n\n<b>Пример:</b>\n<code>// JavaScript\nfunction add(a, b) {\n  return a + b; // Может быть строка + число!\n}\n\n// TypeScript\nfunction add(a: number, b: number): number {\n  return a + b; // Только числа!\n}</code>\n\n<b>Компиляция:</b>\n<code>// .ts файл компилируется в .js\nnpx tsc app.ts → app.js</code>\n\n💡 <b>TypeScript = JavaScript + типы + современные возможности!</b>"
-        },
-        {
-          "id": 2,
-          "text": "Какие базовые типы есть в TypeScript?",
-          "hasOptions": false,
-          "answer": "📋 <b>Базовые типы TypeScript</b>\n\n<b>Примитивы:</b>\n<code>let name: string = 'John';\nlet age: number = 30;\nlet isActive: boolean = true;\nlet data: null = null;\nlet value: undefined = undefined;</code>\n\n<b>Массивы:</b>\n<code>let numbers: number[] = [1, 2, 3];\nlet names: Array<string> = ['John', 'Jane'];</code>\n\n<b>Объекты:</b>\n<code>let user: { name: string; age: number } = {\n  name: 'John',\n  age: 30\n};</code>\n\n<b>Any (избегайте!):</b>\n<code>let anything: any = 'hello';\nanything = 42; // Работает, но теряем типизацию</code>\n\n<b>Unknown (безопасная альтернатива any):</b>\n<code>let value: unknown = 'hello';\nif (typeof value === 'string') {\n  console.log(value.toUpperCase()); // Проверка типа\n}</code>\n\n<b>Void, Never:</b>\n<code>function log(): void { console.log('Hi'); }\nfunction error(): never { throw new Error(); }</code>\n\n💡 <b>Используйте строгие типы вместо any!</b>"
-        },
-        {
-          "id": 3,
-          "text": "Что такое интерфейсы (interface) в TypeScript?",
-          "hasOptions": false,
+      "id": 1,
+      "text": "Что такое TypeScript и зачем он нужен?",
+      "hasOptions": false,
+      "answer": "🔷 <b>TypeScript — JavaScript с типами</b>\n\n<b>Что это:</b>\nНадстройка над JavaScript, добавляющая статическую типизацию.\n\n<b>Преимущества:</b>\n• Ловит ошибки на этапе разработки\n• Автодополнение в IDE\n• Рефакторинг без страха\n• Лучшая документация кода\n• Поддержка современного JS\n\n<b>Пример:</b>\n<code>// JavaScript\nfunction add(a, b) {\n  return a + b; // Может быть строка + число!\n}\n\n// TypeScript\nfunction add(a: number, b: number): number {\n  return a + b; // Только числа!\n}</code>\n\n<b>Компиляция:</b>\n<code>// .ts файл компилируется в .js\nnpx tsc app.ts → app.js</code>\n\n💡 <b>TypeScript = JavaScript + типы + современные возможности!</b>"
+    },
+    {
+      "id": 2,
+      "text": "Какие базовые типы есть в TypeScript?",
+      "hasOptions": false,
+      "answer": "📋 <b>Базовые типы TypeScript</b>\n\n<b>Примитивы:</b>\n<code>let name: string = 'John';\nlet age: number = 30;\nlet isActive: boolean = true;\nlet data: null = null;\nlet value: undefined = undefined;</code>\n\n<b>Массивы:</b>\n<code>let numbers: number[] = [1, 2, 3];\nlet names: Array<string> = ['John', 'Jane'];</code>\n\n<b>Объекты:</b>\n<code>let user: { name: string; age: number } = {\n  name: 'John',\n  age: 30\n};</code>\n\n<b>Any (избегайте!):</b>\n<code>let anything: any = 'hello';\nanything = 42; // Работает, но теряем типизацию</code>\n\n<b>Unknown (безопасная альтернатива any):</b>\n<code>let value: unknown = 'hello';\nif (typeof value === 'string') {\n  console.log(value.toUpperCase()); // Проверка типа\n}</code>\n\n<b>Void, Never:</b>\n<code>function log(): void { console.log('Hi'); }\nfunction error(): never { throw new Error(); }</code>\n\n💡 <b>Используйте строгие типы вместо any!</b>"
+    },
+    {
+      "id": 3,
+      "text": "Что такое интерфейсы (interface) в TypeScript?",
+      "hasOptions": false,
           "answer": "🔗 <b>Интерфейсы — контракты для объектов</b>\n\n<b>Базовый интерфейс:</b>\n<code>interface User {\n  id: number;\n  name: string;\n  email: string;\n}\n\nconst user: User = {\n  id: 1,\n  name: 'John',\n  email: 'john@mail.com'\n};</code>\n\n<b>Опциональные свойства:</b>\n<code>interface Config {\n  host: string;\n  port?: number; // Опциональное\n  ssl?: boolean;\n}\n\nconst config: Config = { host: 'localhost' }; // ✅</code>\n\n<b>Readonly свойства:</b>\n<code>interface Point {\n  readonly x: number;\n  readonly y: number;\n}\n\nconst point: Point = { x: 10, y: 20 };\n// point.x = 30; // ❌ Ошибка!</code>\n\n<b>Методы в интерфейсе:</b>\n<code>interface Calculator {\n  add(a: number, b: number): number;\n  subtract: (a: number, b: number) => number;\n}\n\nconst calc: Calculator = {\n  add(a, b) { return a + b; },\n  subtract: (a, b) => a - b\n};</code>\n\n<b>Наследование интерфейсов:</b>\n<code>interface Animal {\n  name: string;\n}\n\ninterface Dog extends Animal {\n  breed: string;\n}\n\nconst dog: Dog = { name: 'Rex', breed: 'Labrador' };</code>\n\n💡 <b>Интерфейсы — основа типизации объектов!</b>"
-        },
-        {
-          "id": 4,
+    },
+    {
+      "id": 4,
           "text": "В чём разница между interface и type?",
           "hasOptions": false,
           "answer": "⚖️ <b>Interface vs Type — два способа описания типов</b>\n\n<b>Interface:</b>\n<code>interface User {\n  name: string;\n  age: number;\n}\n\n// Можно расширять\ninterface User {\n  email: string; // Добавится к существующему\n}\n\n// Наследование\ninterface Admin extends User {\n  role: string;\n}</code>\n\n<b>Type:</b>\n<code>type User = {\n  name: string;\n  age: number;\n};\n\n// Union типы\ntype Status = 'loading' | 'success' | 'error';\n\n// Пересечение типов\ntype Admin = User & {\n  role: string;\n};</code>\n\n<b>Ключевые отличия:</b>\n\n<b>Interface может:</b>\n• Расширяться (declaration merging)\n• Наследоваться через extends\n• Описывать только объекты\n\n<b>Type может:</b>\n• Union типы (|)\n• Intersection типы (&)\n• Примитивы, функции, кортежи\n• Computed properties\n\n<b>Примеры где только type:</b>\n<code>type StringOrNumber = string | number;\ntype EventHandler<T> = (event: T) => void;\ntype Keys = keyof User; // 'name' | 'age'</code>\n\n<b>Рекомендации:</b>\n• Interface — для объектов и классов\n• Type — для union, computed types, алиасов\n\n💡 <b>Используйте interface для API, type для сложной логики!</b>"
-        },
-        {
-          "id": 5,
+    },
+    {
+      "id": 5,
           "text": "Что такое Generic типы?",
           "hasOptions": false,
           "answer": "🔧 <b>Generics — переиспользуемые типы</b>\n\n<b>Проблема без Generics:</b>\n<code>function getFirst(arr: number[]): number {\n  return arr[0];\n}\n\nfunction getFirstString(arr: string[]): string {\n  return arr[0];\n}\n// Дублирование кода! ❌</code>\n\n<b>Решение с Generics:</b>\n<code>function getFirst<T>(arr: T[]): T {\n  return arr[0];\n}\n\nconst firstNumber = getFirst([1, 2, 3]); // number\nconst firstName = getFirst(['a', 'b']); // string</code>\n\n<b>Generic интерфейсы:</b>\n<code>interface Response<T> {\n  data: T;\n  status: number;\n  message: string;\n}\n\nconst userResponse: Response<User> = {\n  data: { id: 1, name: 'John' },\n  status: 200,\n  message: 'OK'\n};</code>\n\n<b>Ограничения (constraints):</b>\n<code>interface HasLength {\n  length: number;\n}\n\nfunction logLength<T extends HasLength>(item: T): T {\n  console.log(item.length);\n  return item;\n}\n\nlogLength('hello'); // ✅ string имеет length\nlogLength([1, 2, 3]); // ✅ array имеет length\n// logLength(123); // ❌ number не имеет length</code>\n\n<b>Несколько параметров:</b>\n<code>function merge<T, U>(obj1: T, obj2: U): T & U {\n  return { ...obj1, ...obj2 };\n}\n\nconst result = merge({ name: 'John' }, { age: 30 });\n// result: { name: string; age: number }</code>\n\n💡 <b>Generics делают код переиспользуемым и типобезопасным!</b>"
@@ -2212,8 +2210,6 @@
           "text": "Лучшие практики TypeScript",
           "hasOptions": false,
           "answer": "🏆 <b>Best Practices TypeScript</b>\n\n<b>1. Строгая конфигурация:</b>\n<code>{\n  \"strict\": true,\n  \"noImplicitAny\": true,\n  \"strictNullChecks\": true,\n  \"noImplicitReturns\": true\n}</code>\n\n<b>2. Предпочитайте interface для объектов:</b>\n<code>// ✅ Хорошо\ninterface User {\n  id: number;\n  name: string;\n}\n\n// ❌ Плохо для объектов\ntype User = {\n  id: number;\n  name: string;\n};</code>\n\n<b>3. Используйте Union вместо Enum:</b>\n<code>// ✅ Хорошо\ntype Status = 'loading' | 'success' | 'error';\n\n// ❌ Хуже\nenum Status {\n  Loading = 'loading',\n  Success = 'success',\n  Error = 'error'\n}</code>\n\n<b>4. Избегайте any:</b>\n<code>// ❌ Плохо\nconst data: any = fetchData();\n\n// ✅ Хорошо\nconst data: unknown = fetchData();\nif (isUser(data)) {\n  // Теперь data типизирован как User\n}</code>\n\n<b>5. Используйте утилитарные типы:</b>\n<code>// ✅ Хорошо\ntype CreateUser = Omit<User, 'id'>;\ntype UserPreview = Pick<User, 'id' | 'name'>;</code>\n\n💡 <b>Следуйте практикам для качественного TypeScript кода!</b>"
-        }
-      ]
     }
   ]
 }
