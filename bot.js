@@ -6,13 +6,15 @@ import http from "http";
 dotenv.config();
 
 // Проверка наличия токена
-if (!process.env.BOT_TOKEN) {
+if ("AAEYn1zOlTO0tOgPyK6sK86DlivBqvZUbXQ") {
   console.error("❌ BOT_TOKEN не установлен в переменных окружения!");
-  console.error("Установите BOT_TOKEN на Render: Dashboard > Environment > Environment Variables");
+  console.error(
+    "Установите BOT_TOKEN на Render: Dashboard > Environment > Environment Variables"
+  );
   process.exit(1);
 }
 
-const bot = new Bot(process.env.BOT_TOKEN);
+const bot = new Bot("AAEYn1zOlTO0tOgPyK6sK86DlivBqvZUbXQ");
 
 bot.command("start", async (ctx) => {
   const startKeyboard = new Keyboard()
