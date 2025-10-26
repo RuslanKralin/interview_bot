@@ -254,6 +254,7 @@
       "answer": "Он используется для предоставления альтернативного текста, который будет отображаться в случае, если изображение не может быть загружено. Это также может быть полезно для обеспечения доступности, поскольку скрин-ридеры могут использовать этот текст для описания изображения пользователям с ограниченными возможностями."
     }
   ],
+
   "css": [
     {
       "id": 1,
@@ -380,6 +381,7 @@
       ]
     }
   ],
+
   "javascript": [
     {
       "id": 1,
@@ -819,6 +821,7 @@
       "answer": "🤝 <b>Shared Worker — общий воркер для нескольких вкладок</b>\n\n<b>Аналогия:</b>\nОбщая комната для всех вкладок одного сайта. Web Worker — личная комната для одной вкладки.\n\n<b>Зачем нужен:</b>\n• Синхронизация между вкладками\n• Общее состояние приложения\n• Одно WebSocket-соединение на все вкладки\n• Экономия ресурсов\n\n<b>Shared Worker (shared-worker.js):</b>\n<code>let connections = [];\nlet sharedData = { counter: 0 };\n\nself.onconnect = function(event) {\n  const port = event.ports[0];\n  connections.push(port);\n  \n  // Отправляем текущее состояние\n  port.postMessage({ type: 'INIT', data: sharedData });\n  \n  // Слушаем сообщения\n  port.onmessage = function(e) {\n    if (e.data.type === 'INCREMENT') {\n      sharedData.counter++;\n      \n      // Рассылаем всем вкладкам\n      connections.forEach(conn => {\n        conn.postMessage({ type: 'UPDATE', data: sharedData });\n      });\n    }\n  };\n  \n  port.start();\n};</code>\n\n<b>Использование (main.js):</b>\n<code>// Создаём Shared Worker\nconst worker = new SharedWorker('shared-worker.js');\n\n// Получаем порт\nworker.port.start();\n\n// Слушаем сообщения\nworker.port.onmessage = function(e) {\n  if (e.data.type === 'UPDATE' || e.data.type === 'INIT') {\n    document.getElementById('counter').textContent = e.data.data.counter;\n  }\n};\n\n// Отправляем сообщение\ndocument.getElementById('btn').onclick = () => {\n  worker.port.postMessage({ type: 'INCREMENT' });\n};</code>\n\n<b>Кейсы использования:</b>\n• Синхронизация счётчика между вкладками\n• Общий музыкальный плеер\n• Одно WebSocket-соединение для всех вкладок\n• Синхронизация корзины покупок\n• Общий кэш данных\n\n<b>Сравнение воркеров:</b>\n• <b>Web Worker:</b> Одна вкладка, тяжёлые вычисления\n• <b>Service Worker:</b> Все вкладки, сетевой прокси, PWA\n• <b>Shared Worker:</b> Несколько вкладок, общее состояние\n\n<b>⚠️ Особенности:</b>\n• Один воркер на все вкладки домена\n• Общение через порты (MessagePort)\n• Автоматически уничтожается при закрытии всех вкладок\n• Меньшая поддержка браузерами\n\n💡 <b>Идеален для синхронизации между вкладками!</b>"
     }
   ],
+
   "react": [
     {
       "id": 1,
@@ -1843,6 +1846,7 @@
       "answer": "fs.readFile асинхронно читает содержимое файла и возвращает результат через колбэк или промис."
     }
   ],
+
   "db": [
     {
       "id": 1,
@@ -2025,6 +2029,7 @@
       "answer": "🔍 <b>EXPLAIN — анализ производительности запросов</b>\n\n<b>Использование:</b>\n<code>EXPLAIN ANALYZE\nSELECT * FROM users\nWHERE email = 'john@mail.com';</code>\n\n<b>Что смотреть:</b>\n• <b>Seq Scan:</b> Полное сканирование (медленно)\n• <b>Index Scan:</b> Использует индекс (быстро)\n• <b>Cost:</b> Оценка стоимости\n• <b>Rows:</b> Количество строк\n\n<b>В Sequelize:</b>\n<code>const users = await User.findAll({\n  where: { email: 'john@mail.com' },\n  logging: console.log // Покажет SQL\n});\n\n// Или напрямую\nawait sequelize.query('EXPLAIN ANALYZE SELECT ...');</code>\n\n<b>Оптимизация:</b>\n\n<b>1. Добавить индексы:</b>\n<code>CREATE INDEX idx_email ON users(email);</code>\n\n<b>2. Избегать SELECT *:</b>\n<code>// ❌ Плохо\nSELECT * FROM users;\n\n// ✅ Хорошо\nSELECT id, name, email FROM users;</code>\n\n<b>3. Использовать LIMIT:</b>\n<code>SELECT * FROM users LIMIT 100;</code>\n\n<b>4. Оптимизировать JOIN:</b>\n<code>// Убедитесь, что есть индексы на ключах</code>\n\n💡 <b>EXPLAIN — первый шаг оптимизации!</b>"
     }
   ],
+
   "ts": [
     {
       "typescript": [

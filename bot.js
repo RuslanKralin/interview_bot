@@ -109,8 +109,6 @@ bot.on("callback_query:data", async (ctx) => {
     await ctx.reply("❌ Wrong");
     await ctx.answerCallbackQuery();
   }
-
-  //   const ans
 });
 
 bot.catch((err) => {
