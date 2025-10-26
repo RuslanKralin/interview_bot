@@ -10,6 +10,23 @@ export const getRandomQuestion = (topic) => {
 
 
 
+// Function to sanitize HTML content for Telegram
+const sanitizeHtml = (html) => {
+    if (!html) return html;
+    
+    // Replace problematic HTML patterns that cause parsing errors
+    return html
+        // Fix any remaining single quotes in HTML attributes
+        .replace(/href='([^']*)'(\s+target='[^']*')?/g, 'href="$1"$2')
+        .replace(/target='([^']*)'/g, 'target="$1"')
+        // Ensure proper HTML tag formatting
+        .replace(/<code>/g, '<code>')
+        .replace(/<\/code>/g, '</code>')
+        // Remove any stray backticks that might interfere with HTML parsing
+        .replace(/^`+/, '')
+        .replace(/`+$/, '');
+};
+
 export const getCorrectAnswer = (topic, questionId) => {
     // Convert topic to lowercase to match the JSON keys
     const topicKey = topic.toLowerCase();
@@ -31,14 +48,18 @@ export const getCorrectAnswer = (topic, questionId) => {
         return 'Извините, не удалось найти ответ на этот вопрос.';
     }
     
-    // Return the correct answer based on question type
+    // Get the raw answer
+    let answer;
     if (!question.hasOptions) {
-        return question.answer || question.correctAnswer || 'Ответ не найден.';
+        answer = question.answer || question.correctAnswer || 'Ответ не найден.';
+    } else {
+        // Find and return the correct option text
+        const correctOption = question.options?.find((option) => option.isCorrect);
+        answer = correctOption?.text || 'Правильный ответ не найден.';
     }
     
-    // Find and return the correct option text
-    const correctOption = question.options?.find((option) => option.isCorrect);
-    return correctOption?.text || 'Правильный ответ не найден.';
+    // Sanitize HTML content before returning
+    return sanitizeHtml(answer);
 };
 
 

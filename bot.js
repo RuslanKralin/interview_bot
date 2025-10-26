@@ -95,10 +95,21 @@ bot.on("callback_query:data", async (ctx) => {
 
   if (!callbackData.type.includes("option")) {
     const answer = getCorrectAnswer(callbackData.type, callbackData.questionId);
-    await ctx.reply(answer, {
-      parse_mode: "HTML",
-      disable_web_page_preview: true,
-    });
+    
+    try {
+      // Try to send with HTML parsing first
+      await ctx.reply(answer, {
+        parse_mode: "HTML",
+        disable_web_page_preview: true,
+      });
+    } catch (error) {
+      console.error("HTML parsing failed, sending as plain text:", error.message);
+      // If HTML parsing fails, send as plain text
+      await ctx.reply(answer, {
+        disable_web_page_preview: true,
+      });
+    }
+    
     await ctx.answerCallbackQuery();
     return;
   }
